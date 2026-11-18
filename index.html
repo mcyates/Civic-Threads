@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Civic Threads Apparel</title>
-    <script src="../src/app.js" defer></script>
+    <script src="./src/app.js" defer></script>
     <script src="https://cdn.shopify.com/storefront/web-components.js" async>
     </script>
 </head>
@@ -28,16 +28,19 @@
         </shopify-store>
         <shopify-context type="collection" handle="hydrogen">
             <template>
+
                 <h2>
                     <span>Check out our latest collection: </span>
                     <shopify-data query="collection.title"></shopify-data>
                 </h2>
                 <shopify-list-context type="product" query="collection.products" first="12">
                     <template>
-                        <shopify-media width="200" height="300" query="product.featuredImage"></shopify-media>
-                        <shopify-data query="product.title"></shopify-data>
-                        <shopify-data query="product.vendor"></shopify-data>
-                        <shopify-data query="product.description"></shopify-data>
+                        <article>
+                            <shopify-media width="200" height="300" query="product.featuredImage"></shopify-media>
+                            <shopify-data query="product.title"></shopify-data>
+                            <shopify-data query="product.vendor"></shopify-data>
+                            <shopify-data query="product.description"></shopify-data>
+                        </article>
                     </template>
                 </shopify-list-context>
             </template>
