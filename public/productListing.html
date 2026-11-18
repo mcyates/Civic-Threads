@@ -6,13 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Civic Threads Apparel</title>
     <script src="../src/app.js" defer></script>
+    <script src="https://cdn.shopify.com/storefront/web-components.js" async>
+    </script>
 </head>
 
 <body>
     <header>
         <nav>
             <ul>
-                <li><a href="./index.html">Home</a></li>
+                <li><a href="../index.html">Home</a></li>
                 <li><a href="./productListing.html">Shop</a></li>
                 <li><a href="./aboutPage.html">About</a></li>
                 <li><a href="./checkout.html">Checkout</a></li>
@@ -20,6 +22,11 @@
         </nav>
         <h1>Shop</h1>
     </header>
+
+
+
+    <shopify-store store-domain="https://your-store.myshopify.com" country="US" language="en">
+    </shopify-store>
 
 </body>
 
