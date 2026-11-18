@@ -32,10 +32,13 @@
         <shopify-list-context type="product" query="products" first="10">
             <template>
                 <h2>
+                    <shopify-media width="200" height="300" query="product.featuredImage"></shopify-media>
                     <shopify-data query="product.title"></shopify-data>
+                    <shopify-data query="product.vendor"></shopify-data>
+                    <shopify-data query="product.description"></shopify-data>
                 </h2>
             </template>
-
+            </shopify-context>
     </main>
 </body>
 

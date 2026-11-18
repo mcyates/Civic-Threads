@@ -1,0 +1,19 @@
+{
+  "name": "civic-threads",
+  "version": "1.0.0",
+  "description": "civic threads for git-450",
+  "main": "./src/app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mcyates/Civic-Threads.git"
+  },
+  "author": "git-450 civic threads webdev team",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mcyates/Civic-Threads/issues"
+  },
+  "homepage": "https://github.com/mcyates/Civic-Threads#readme"
+}
