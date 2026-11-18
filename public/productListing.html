@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Civic Threads Apparel</title>
-    <script src="../src/app.js" defer></script>
     <script src="https://cdn.shopify.com/storefront/web-components.js" async>
     </script>
 </head>
@@ -31,7 +30,7 @@
 
         <shopify-list-context type="product" query="products" first="10">
             <template>
-                <article>
+                <article shopify-attr--data-id="product.handle" class="product">
 
                     <shopify-media width="200" height="300" query="product.featuredImage"></shopify-media>
                     <h2>
@@ -39,10 +38,14 @@
                     </h2>
                     <shopify-data query="product.vendor"></shopify-data>
                     <shopify-data query="product.description"></shopify-data>
+                    <shopify-money query="product.selectedOrFirstAvailableVariant.price" format="money_with_currency">
+                    </shopify-money>
+                    <a href="./product.html?">Details</a>
                 </article>
             </template>
             </shopify-context>
     </main>
+    <script src="../src/app.js" defer></script>
 </body>
 
 </html>
