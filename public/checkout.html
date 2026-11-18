@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Civic Threads Apparel</title>
     <script src="../src/app.js" defer></script>
+    <script src="https://cdn.shopify.com/storefront/web-components.js" async>
+    </script>
 </head>
 
 <body>
@@ -20,6 +22,12 @@
         </nav>
         <h1>Checkout</h1>
     </header>
+
+    <main>
+        <shopify-store store-domain="civic-threads-dev.myshopify.com" country="US" language="en"
+            public-access-token="7c491e3417403558712288f3c692aa8c">
+        </shopify-store>
+    </main>
 </body>
 
 </html>
