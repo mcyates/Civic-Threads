@@ -25,8 +25,15 @@
 
 
 
-    <shopify-store store-domain="https://your-store.myshopify.com" country="US" language="en">
+    <shopify-store store-domain="civic-threads-dev.myshopify.com" country="US" language="en">
     </shopify-store>
+
+    <shopify-list-context type="product" query="products" first="10">
+        <template>
+            <h2>
+                <shopify-data query="product.title"></shopify-data>
+            </h2>
+        </template>
 
 </body>
 
