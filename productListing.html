@@ -3,9 +3,90 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="assets/icons/favicon/icons8-thread-linear-colour-96.png">
     <title>Civic Threads Apparel</title>
+    <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
+    <header>
+        <a href="index.html"><img src="assets/siteImages/logo.png" alt=" logo"></a>
+        <nav>
+            <ul>
+                <li><a href="checkoutFlow.html"><img src="assets/icons/icons8-shopping-cart-48.png" alt="shopping cart" ></a></li>
+                <li><a href="#">Shop</a></li> 
+                <li><a href="IndividualProductDetailPages.html">See The Source</a></li>
+                <li><a href="aboutPage.html">About Us</a></li>
+                <!-- I put only these because I think others would be linked to from various clicks in shop -->
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h1>See It. Find it. Wear it.</h1>
+            <p>Learn about where your clothing comes from evidence in plain sight. Start with with idea and follow the proof.</p>
+        </section>
+        <section>
+            <h2>Narrow Your Search</h2>
+                <form action="GET">
+                    <fieldset>
+                        <input type="text" name="category" id="category" aria-label="desired clothing type"  placeholder="Category - Tees">
+                        <input type="text" name="material" id="material" aria-label="desired material" placeholder="Material - 100% Cotton">
+                        <input type="text" name="madeIn" id="madeIn" aria-label=" desired origin Country" Placeholder="Made in - France">
+                    </fieldset>
+                </form>
+                <p id="searchResults"> ${num} items found</p>
+                <button>Clear All</button>
+                <div id="listings">
+                    <div class="card">
+                        <img src="assets/siteImages/thomas-william-6Sls-TB27kM-unsplash.jpg" alt="" class="listingImg">
+                        <h2> class="title">${product} - ${cur}${price}</h2>
+                        <p class="material/location">{material}- Made in {country}</p>
+                        <p class="documented">Officially Documented</p>
+                        <p><a href="IndividualProductDetailPages.html" class = "button ">View Details -></a></p>
+                    </div>
+                    <div class="card">
+                        <img src="assets/siteImages/thomas-william-6Sls-TB27kM-unsplash.jpg" alt="" class="listingImg">
+                        <h2> class="title">${product} - ${cur}${price}</h2>
+                        <p class="material/location">{material}- Made in {country}</p>
+                        <p class="documented">Officially Documented</p>
+                        <p><a href="IndividualProductDetailPages.html" class = "button ">View Details -></a></p>
+                    </div>
+                    <div class="card">
+                        <img src="assets/siteImages/thomas-william-6Sls-TB27kM-unsplash.jpg" alt="" class="listingImg">
+                        <h2> class="title">${product} - ${cur}${price}</h2>
+                        <p class="material/location">{material}- Made in {country}</p>
+                        <p class="documented">Officially Documented</p>
+                        <p><a href="IndividualProductDetailPages.html" class = "button ">View Details -></a></p>
+                    </div>
+                    <div class="card">
+                        <img src="assets/siteImages/thomas-william-6Sls-TB27kM-unsplash.jpg" alt="" class="listingImg">
+                        <h2> class="title">${product} - ${cur}${price}</h2>
+                        <p class="material/location">{material}- Made in {country}</p>
+                        <p class="documented">Officially Documented</p>
+                        <p><a href="IndividualProductDetailPages.html" class = "button ">View Details -></a></p>
+                    </div>
+                </div>
+        </section>
+        <section>
+            <h2>A label you can trust.</h2>
+            <p>[D] Documented: Officially recognized as sustainable and having a source that supports the claim.</p>
+            <p>[Un] Unknown: These claims lack evidence or are missing necessary information</p>
+            <p><a href="aboutPage.html" class = "button">Open the transparency hub -></a></p>
+        </section>
+    </main>
 
+    <footer>
+        <div>
+            <a href="#"><img src="assets/siteImages/logo.png" alt=" logo"></a>
+            <p><a target="_blank" href="assets/icons/favicon/icons8-thread-linear-colour-96.png">Thread</a> favicon by <a target="_blank" href="https://icons8.com">Icons8</a></p>
+            <p><a target="_blank" href="https://icons8.com/icon/P6ZYIof6BwLW/shopping-cart">Shopping Cart</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a></p>
+        </div>
+        <p>Shop with those you trust.</p>
+        <div>
+            <a href="productListing.html">Shop Us</a>
+            <a href="IndividualProductDetailPages.html">See Our Sources</a>
+            <a href="aboutPage.html">About Us</a>
+        </div>
+    </footer>
 </body>
 </html>

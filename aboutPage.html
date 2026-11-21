@@ -4,8 +4,121 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Civic Threads Apparel</title>
+    <link rel="icon" type="image/png" href="assets/icons/favicon/icons8-thread-linear-colour-96.png">
+    <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
+    <header>
+        <a href="index.html"><img src="assets/siteImages/logo.png" alt=" logo"></a>
+        <nav>
+            <ul>
+                <li><a href="checkoutFlow.html"><img src="assets/icons/icons8-shopping-cart-48.png" alt="shopping cart" ></a></li>
+                <li><a href="productListing.html">Shop</a></li> 
+                <li><a href="IndividualProductDetailPages.html">See The Source</a></li>
+                <li><a href="#">About Us</a></li>
+                <!-- I put only these because I think others would be linked to from various clicks in shop -->
+            </ul>
+        </nav>
+    </header>
 
+    <main>
+        <section>
+            <h2>Original Threads to Final Product</h2>
+            <p>A transparent and honest look at the source, materials and price of our product. Including our </p>
+            <div>
+                <a href="#creating" class="button">01-Creating</a>
+                <a href="#pricing" class="button">02-Pricing</a>
+            </div>
+        </section>
+        <section id="creating">
+            <h2>01|Creating the Product</h2>
+            <div>
+                <h3>{product} | ${country}</h3>
+                <p>Create and Dye - ${create}</p>
+                <p>Cut and Sew - ${sew}</p>
+                <p>Inspection and Pack - ${ship}</p>
+                <p>Maker: ${factory}</p>
+                <p>[{tagCert} - ${tagType}]</p>
+            </div>
+            <div>
+                <h3>{product} | ${country}</h3>
+                <p>Create and Dye - ${create}</p>
+                <p>Cut and Sew - ${sew}</p>
+                <p>Inspection and Pack - ${ship}</p>
+                <p>Maker: ${factory}</p>
+                <p>[{tagCert} - ${tagType}]</p>
+            </div>
+        </section>
+        <section id="pricing">
+            <h2>02| Transparent and honest pricing</h2>
+            <table>
+                <legend>${product} | ${country}</legend>
+                <tr>
+                    <th>Materials</th>
+                    <td>${matPrice}</td>
+                </tr>
+                <tr>
+                    <th>Cut & Sewing</th>
+                    <td>${sewPrice}</td>
+                </tr>
+                <tr>
+                    <th>Transporting</th>
+                    <td>${transPrice}</td>
+                </tr>
+                <tr>
+                    <th>Operating</th>
+                    <td>${opPrice}</td>
+                </tr>
+                <tr>
+                    <th>Brand Margins</th>
+                    <td>${margin}</td>
+                </tr>
+                <p>
+                    Final Retail Price ${cur}${Math.sumPrecise([matPrice,sewPrice,transPrice,opPrice,margin])}
+                </p>
+            </table>
+
+            <table>
+                <legend>${product} | ${country}</legend>
+                <tr>
+                    <th>Materials</th>
+                    <td>${matPrice}</td>
+                </tr>
+                <tr>
+                    <th>Cut & Sewing</th>
+                    <td>${sewPrice}</td>
+                </tr>
+                <tr>
+                    <th>Transporting</th>
+                    <td>${transPrice}</td>
+                </tr>
+                <tr>
+                    <th>Operating</th>
+                    <td>${opPrice}</td>
+                </tr>
+                <tr>
+                    <th>Brand Margins</th>
+                    <td>${margin}</td>
+                </tr>
+                <p>
+                    Final Retail Price ${cur}${Math.sumPrecise([matPrice,sewPrice,transPrice,opPrice,margin])}
+                </p>
+            </table>
+        </section>
+
+    </main>
+    <footer>
+        <div>
+            <a href="#"><img src="assets/siteImages/logo.png" alt=" logo"></a>
+            <p><a target="_blank" href="assets/icons/favicon/icons8-thread-linear-colour-96.png">Thread</a> favicon by <a target="_blank" href="https://icons8.com">Icons8</a></p>
+            <p><a target="_blank" href="https://icons8.com/icon/P6ZYIof6BwLW/shopping-cart">Shopping Cart</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a></p>
+        </div>
+        <p>Shop with those you trust.</p>
+        <div>
+            <a href="productListing.html">Shop Us</a>
+            <a href="IndividualProductDetailPages.html">See Our Sources</a>
+            <a href="aboutPage.html">About Us</a>
+        </div>
+    </footer>
 </body>
 </html>

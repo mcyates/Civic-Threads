@@ -1,0 +1,131 @@
+
+
+
+
+/* WORKING CHECKLIST BEFORE TURN IN */
+/* ---------------------------------------------------- */
+    /* 2. Check if all problems in TODO.txt are handled */
+/* ---------------------------------------------------- */
+
+
+
+/* @layer reset, base, layout, components, utilities, states; */
+/* @layer reset{} */
+/* @layer base{} */
+/* @layer layout{} */
+/* @layer components{} */
+/* @layer utilities{} */
+/* @layer states{} */
+
+
+
+/*TEMPORARY ROOT*/
+
+
+:root{
+    /* BRAND"S TEMPORARY COLORS */
+    --primary: #D5BC94;
+    --secondary: #F5E4D7;
+    --text: #0D1321;
+    --action: #776274;
+    --prim-nav: #2E4D2D;
+    /* NICO's COLORS */
+    /*  forest in existing color palette, forest=prim-nav */
+    --terracotta: #C46A4B;
+    --coastal: #5B8C88;
+    --canvas:#F5EAD7;
+    --charcoal:#2b2b2b;
+    --gap: 15px;
+    --space: 1rem;
+    --body-font: arial;
+}
+
+
+
+
+
+
+/* --------------------------------------------------------------------------------------------------------------------------------------------------- */
+/* GLOBAL */
+/* ------------------------------- */
+*{
+    box-sizing: border-box;
+}
+
+/* ------------------------------- */
+/* TEMPORARY BODY STYLING  */
+/* ------------------------------- */
+body{
+    background-color: var(--primary);
+    color: var(--text);
+    font-family: var(--body-font);
+    width:100%;
+    height:100vh;
+    margin: 0 auto;
+}
+
+
+
+/* ------------------------------- */
+/* DIRECT CHILDREN OF BODY*/
+/* ------------------------------- */
+header{
+    display:flex;
+    flex-direction: row;
+    align-items: end;
+    background-color: var(--secondary);
+}
+
+
+
+/* ------------------------------- */
+/*SECOND LAYER OF CHILDREN/DIRECT CHILDREN OF MAIN/FOOTER/HEADER (SECTIONS,LOGO IMAGE)*/
+/* ------------------------------- */
+
+section{
+    padding:2em;
+}
+
+main section:nth-child(even){
+    background-color: var(--secondary);
+} 
+
+
+
+header > a img, footer img{
+    width: 300px;
+}
+
+/* ------------------------------- */
+/* THIRD + LAYER  (nav list, any imgs(technically second))*/
+/* ------------------------------- */
+
+nav ul{
+list-style: none;    
+display:flex;
+flex-direction: row;
+gap:var(--gap);
+align-items: center;
+}
+
+main img{
+    width: 400px;
+}
+
+#listings{
+ display:grid;
+ grid-template-columns: 1fr 1fr;
+}
+
+.title{
+    font-weight: bold;
+}
+
+.button{
+    display:block;
+    font-weight: bold;
+}
+/* --------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+
+

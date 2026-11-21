@@ -1,0 +1,108 @@
+
+Not sure if we'll need all of this or if so what parts and who will use. 
+But I added to what I wanted to put in here for what I thought might be needed.
+
+
+
+HTML
+----------------------------------------------------------------------------------
+
+    TO FIX
+    -----------------------------------------------
+        1. String formatting for easy integration
+        2. Aria page = current on nav added 
+        3. Decide proper/agreed upon tag/class names
+        4. Internal linking
+        5. General overview/checking of accessability
+        6. Pretty sure best practice is to treat internal linking as button-like classes and reserve
+        button tag for buttons requiring js. I believe I did that but I need to double check.
+        7.General detailed overview to ensure Good semantic HTML
+         [1-7]   ~Lilly
+    -----------------------------------------------
+
+    TO DO
+    -----------------------------------------------
+        1. I haven't implemented "further source example" - |This might be explained in last peer review vid from ui, I will check and ask Bridget to communicate with them if not| 
+            I'm not entirely sure what element it's supposed to be applied to but: 
+                My working theory is that it's supposed to be a tool tip ? or something along those lines , 
+                maybe implementation would look diff on mobile. It might be "details" "button?" on product listing,
+                which is currently linking to individual product page. 
+                In that case extra UI implementation such as "add to cart" would fall to us. 
+        2. Make wireframe for check out page that plays nice with what Matthew has.
+        3. Implement above wireframe from above 
+        4. I should have put image from product listing in produce imgs instead, not super sure it matters since it's temporary
+        5. Responsive images when we get them 
+        6. Implementation of Bridgets idea in html (not 100% sure if there's more info being shown or not)
+        7. Implementation of Lilly's idea in html
+        [1-7]   ~Lilly
+    -----------------------------------------------
+
+
+-----------------------------------------------------------------------------------
+
+
+
+
+CSS
+-----------------------------------------------------------------------------------
+
+
+
+    TO FIX
+    -----------------------------------------------
+        1. Revisit body styles
+        2. Header are wonky -> Do Nico's implementation
+        3. Fix image styling when images are received 
+        4. styling for lilly's theme idea
+        [1-4] ~Lilly
+        
+    -----------------------------------------------
+
+
+
+    TO DO
+    -----------------------------------------------
+        1. Implement commented out layers
+        2. Theme vars (with a transtion in case of "flash bangs")
+        3. Implementation of styles/classes as they pertain to Bridget's idea (greying out or darkening everything else on hover of product or implementing a hidden class to be toggled)
+    -----------------------------------------------
+
+
+
+
+
+-----------------------------------------------------------------------------------
+JS FRONT
+
+    TO FIX
+    -----------------------------------------------
+        
+    -----------------------------------------------
+
+
+
+    TO DO
+    -----------------------------------------------
+        1. Retrieve and apply themes based on: 1.last stored memory, then browser pref, then OS pref | 2 diff implementation for color vs txt themes 
+        2. Bridget's idea I think would already be queried in js if more info shown but I'm putting here in case more queries needed. May be toggling a hidden class.
+    -----------------------------------------------
+-----------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------
+JS Back
+-----------------------------------------------------------------------------------
+
+
+
+
+
+
+ONCE SOMETHING HAS BEEN REMEDIED AND REMOVED FROM LISTS ABOVE, LOG HERE  (probably not as important unless it's a bigger or more complicate thing )
+
+------------------------------------------------------------------------------------
+LOG[numb]~Name
+-----------------------------------------------
+1.Fix: (Ex: I did x to fix y - removing from list)
+2.Bugs: (Ex1: I fixed x.1 part but it still does x.2, revising fix section.Ex2. I fixed x but introduced Y bug.)
+-----------------------------------------------
+
+-------------------------------------------------------------------------------------

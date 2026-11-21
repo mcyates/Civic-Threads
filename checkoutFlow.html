@@ -3,9 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="assets/icons/favicon/icons8-thread-linear-colour-96.png">
     <title>Civic Threads Apparel</title>
+    <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
-
+    <header>
+        <a href="index.html"><img src="assets/siteImages/logo.png" alt=" logo"></a>
+        <nav>
+            <ul>
+                <li><a href="#"><img src="assets/icons/icons8-shopping-cart-48.png" alt="shopping cart" ></a></li>
+                <li><a href="productListing.html">Shop</a></li> 
+                <li><a href="IndividualProductDetailPages.html">See The Source</a></li>
+                <li><a href="aboutPage.html">About Us</a></li>
+                <!-- I put only these because I think others would be linked to from various clicks in shop -->
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <form action="" method="POST">
+                <fieldset>
+                    <legend>Preferred Method of Payment</legend>
+                    <label for="cash-pref">cash</label>
+                    <input type="radio" name="pay-pref" id="cash-pref" checked>
+                    <label for="card-pref">card</label>
+                    <input type="radio" name="pay-pref" id="card-pref">
+                </fieldset>
+                <div>
+                    <label for="fname">First Name</label>
+                    <input type="text" name="fname" id="fname">
+                </div>
+                <div>
+                    <label for="lname">Last Name</label>
+                    <input type="text" name="lname" id="lname">
+                </div>
+                <div>
+                    <label for="address">Delivery Address</label>
+                    <input type="text" name="address" id="address">
+                </div>
+            </form>
+        </section>
+        <section></section>
+        <section></section>
+    </main>
+    <footer>
+        <div>
+            <a href="#"><img src="assets/siteImages/logo.png" alt=" logo"></a>
+            <p><a target="_blank" href="assets/icons/favicon/icons8-thread-linear-colour-96.png">Thread</a> favicon by <a target="_blank" href="https://icons8.com">Icons8</a></p>
+            <p><a target="_blank" href="https://icons8.com/icon/P6ZYIof6BwLW/shopping-cart">Shopping Cart</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a></p>
+        </div>
+        <p>Shop with those you trust.</p>
+        <div>
+            <a href="productListing.html">Shop Us</a>
+            <a href="IndividualProductDetailPages.html">See Our Sources</a>
+            <a href="aboutPage.html">About Us</a>
+        </div>
+    </footer>
 </body>
 </html>
