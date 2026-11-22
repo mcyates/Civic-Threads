@@ -12,13 +12,27 @@ shopContext.innerHTML = `
                     <h2>
                         <shopify-data query="product.title"></shopify-data>
                     </h2>
+                    <h3>
+                        <shopify-money query="product.selectedOrFirstAvailableVariant.price" format="money_with_currency">
+                        </shopify-money>
+                    </h3>
+                      <button
+                            onclick="getElementById('cart').addLine(event).showModal();">
+                            Add to cart
+                        </button>
+                    <p>
+                    <shopify-variant-selector></shopify-variant-selector>
+                    </p>
+                    <p>
                     <shopify-data query="product.vendor"></shopify-data>
+                    </p>
+                    <p>
                     <shopify-data query="product.description"></shopify-data>
-                    <shopify-money query="product.selectedOrFirstAvailableVariant.price" format="money_with_currency">
-                    </shopify-money>
+                    </p>
+
                 </article>
                 </template>
-`
+`;
 shopifyStore.appendChild(shopContext);
 
 

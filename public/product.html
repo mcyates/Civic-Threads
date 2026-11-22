@@ -18,7 +18,11 @@
                 <li><a href="../index.html">Home</a></li>
                 <li><a href="./aboutPage.html">About</a></li>
                 <li><a href="./productListing.html">Shop</a></li>
-                <li><a href="./checkout.html">Checkout</a></li>
+                <li>
+                    <button onclick="getElementById('cart').showModal();">
+                        Show Cart
+                    </button>
+                </li>
             </ul>
         </nav>
         <h1>Product</h1>
@@ -26,7 +30,9 @@
     <main>
         <shopify-store store-domain="civic-threads-dev.myshopify.com" country="US" language="en"
             public-access-token="7c491e3417403558712288f3c692aa8c">
+
         </shopify-store>
+        <shopify-cart id="cart"></shopify-cart>
     </main>
 
 </body>

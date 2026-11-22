@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Civic Threads Apparel</title>
-    <script src="https://cdn.shopify.com/storefront/web-components.js">
-    </script>
+    <script src="https://cdn.shopify.com/storefront/web-components.js"></script>
+    <script src="./src/app.js" defer></script>
 </head>
 
 <body>
@@ -16,7 +16,11 @@
                 <li><a href="./index.html">Home</a></li>
                 <li><a href="./public/aboutPage.html">About</a></li>
                 <li><a href="./public/productListing.html">Shop</a></li>
-                <li><a href="./public/checkout.html">Checkout</a></li>
+                <li>
+                    <button onclick="getElementById('cart').showModal();">
+                        Show Cart
+                    </button>
+                </li>
             </ul>
         </nav>
         <h1>Home</h1>
@@ -48,7 +52,7 @@
 
 
 
-    <script src="./src/app.js" defer></script>
+
 
 </body>
 
