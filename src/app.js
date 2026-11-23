@@ -8,7 +8,7 @@ setTimeout(() => {
     prodList = document.querySelectorAll(".product[data-id]");
     setupProductLinks(prodList)
 
-}, 1000);
+}, 1200);
 
 function setupProductLinks(prodList) {
     //building the dynamic link to each individual product page
