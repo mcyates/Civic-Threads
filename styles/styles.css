@@ -1,131 +1,626 @@
-
-
-
-
-/* WORKING CHECKLIST BEFORE TURN IN */
-/* ---------------------------------------------------- */
-    /* 2. Check if all problems in TODO.txt are handled */
-/* ---------------------------------------------------- */
-
-
-
-/* @layer reset, base, layout, components, utilities, states; */
-/* @layer reset{} */
-/* @layer base{} */
-/* @layer layout{} */
-/* @layer components{} */
-/* @layer utilities{} */
-/* @layer states{} */
-
-
-
-/*TEMPORARY ROOT*/
-
-
-:root{
-    /* BRAND"S TEMPORARY COLORS */
-    --primary: #D5BC94;
-    --secondary: #F5E4D7;
-    --text: #0D1321;
-    --action: #776274;
-    --prim-nav: #2E4D2D;
-    /* NICO's COLORS */
-    /*  forest in existing color palette, forest=prim-nav */
-    --terracotta: #C46A4B;
-    --coastal: #5B8C88;
-    --canvas:#F5EAD7;
-    --charcoal:#2b2b2b;
-    --gap: 15px;
-    --space: 1rem;
-    --body-font: arial;
-}
-
-
-
-
-
-
-/* --------------------------------------------------------------------------------------------------------------------------------------------------- */
-/* GLOBAL */
-/* ------------------------------- */
-*{
+/* Base */
+* {
     box-sizing: border-box;
 }
 
-/* ------------------------------- */
-/* TEMPORARY BODY STYLING  */
-/* ------------------------------- */
-body{
-    background-color: var(--primary);
-    color: var(--text);
-    font-family: var(--body-font);
-    width:100%;
-    height:100vh;
+body {
+    margin: 0;
+    font-family: "Inter", Helvetica, Arial, sans-serif;
+    color: #2B2B2B;
+    background: #F5EAD7;
+    line-height: 1.5;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+h1, h2, h3, h4, p {
+    margin: 0;
+}
+
+main {
+    display: block;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    color: #2E4D2D;
+}
+
+/* Header */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 1.5rem 3.75rem;
+    background: #F5EAD7;
+}
+
+header > h1 {
+    position: absolute;
+    width: 0.0625rem;
+    height: 0.0625rem;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+}
+
+.logo {
+    height: 2.5rem;
+    width: auto;
+}
+
+.homeLogo {
+    width: 9rem;
+    height: auto;
+}
+
+header nav ul {
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.shoppingCart {
+    width: 2rem;
+    height: 2rem;
+}
+
+header nav a {
+    font-size: 1rem;
+    color: #2E4D2D;
+}
+
+header nav a:hover {
+    text-decoration: underline;
+}
+
+
+/* Hero */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2.5rem;
+    padding: 2.5rem 3.75rem;
+    background: #F5EAD7;
+}
+
+.heroLandingSection {
+    flex: 1;
+    max-width: 32.5rem;
+}
+
+.heroLandingSection h1 {
+    font-size: 2.5rem;
+    font-weight: 400;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+}
+
+.heroLandingSection p {
+    font-size: 1rem;
+    margin-bottom: 2.5rem;
+}
+
+.heroLandingSection button {
+    display: block;
+    width: 100%;
+    padding: 0.875rem 1rem;
+    margin-bottom: 1rem;
+    border: none;
+    font-family: inherit;
+    font-size: 0.875rem;
+    font-weight: 600;
+}
+
+.btnCollection {
+    background: #2E4D2D;
+    color: #F5EAD7;
+}
+
+.btnSources {
+    background: #5B8C88;
+    color: #F5EAD7;
+}
+
+.heroLandingSection button:hover {
+    opacity: 0.9;
+}
+
+.heroImage {
+    flex: 1 1 0;
+    min-width: 0;
+    width: 100%;
+    max-width: 37.5rem;
+    height: auto;
+    aspect-ratio: 363 / 300;
+    object-fit: cover;
+    background: #5B8C88;
+}
+
+
+/* Intro */
+.intro {
+    padding: 3.75rem 3.75rem 2.5rem;
+    text-align: center;
+}
+
+.intro h2 {
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: 1.3;
+    margin-bottom: 1rem;
+}
+
+.intro p {
+    max-width: 40rem;
     margin: 0 auto;
+    font-size: 1rem;
 }
 
 
+/* Product pieces */
+.pieces {
+    padding: 1.25rem 3.75rem 2.5rem;
+}
 
-/* ------------------------------- */
-/* DIRECT CHILDREN OF BODY*/
-/* ------------------------------- */
-header{
-    display:flex;
-    flex-direction: row;
-    align-items: end;
-    background-color: var(--secondary);
+.pieces h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+}
+
+.pieceProductGrid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 3.5rem;
+}
+
+.piece {
+    display: flex;
+    flex-direction: column;
+}
+
+.piece-image {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 276 / 151;
+    object-fit: cover;
+    background: #5B8C88;
+    margin-bottom: 1rem;
+}
+
+.piece h4 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.piece p {
+    font-size: 0.94rem;
+    margin-bottom: 1rem;
+}
+
+.piecesBtn {
+    display: block;
+    padding: 0.75rem 1rem;
+    background: #2E4D2D;
+    color: #F5EAD7;
+    font-size: 0.81rem;
+    text-align: center;
+}
+
+.piecesBtn:hover {
+    opacity: 0.9;
 }
 
 
-
-/* ------------------------------- */
-/*SECOND LAYER OF CHILDREN/DIRECT CHILDREN OF MAIN/FOOTER/HEADER (SECTIONS,LOGO IMAGE)*/
-/* ------------------------------- */
-
-section{
-    padding:2em;
+/* Trust */
+.trust {
+    padding: 3rem 3.75rem 3.5rem;
+    background: #5B8C88;
 }
 
-main section:nth-child(even){
-    background-color: var(--secondary);
-} 
-
-
-
-header > a img, footer img{
-    width: 300px;
+.trust h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+    color: #F5EAD7;
 }
 
-/* ------------------------------- */
-/* THIRD + LAYER  (nav list, any imgs(technically second))*/
-/* ------------------------------- */
-
-nav ul{
-list-style: none;    
-display:flex;
-flex-direction: row;
-gap:var(--gap);
-align-items: center;
+.labelGrid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 2.5rem;
 }
 
-main img{
-    width: 400px;
+.labelCard {
+    padding: 1rem 1.25rem;
+    background: #F5EAD7;
 }
 
-#listings{
- display:grid;
- grid-template-columns: 1fr 1fr;
+.labelCard h4 {
+    font-size: 0.94rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
 }
 
-.title{
-    font-weight: bold;
+.labelCard p {
+    font-size: 0.81rem;
+    line-height: 1.5;
 }
 
-.button{
-    display:block;
-    font-weight: bold;
+
+/* Learn More */
+.learnMore {
+    padding: 5rem 3.75rem;
 }
-/* --------------------------------------------------------------------------------------------------------------------------------------------------- */
 
+.learnMore h3 {
+    font-size: 1.63rem;
+    font-weight: 600;
+    line-height: 1.3;
+    margin-bottom: 1rem;
+}
 
+.learnMore p {
+    font-size: 0.88rem;
+    margin-bottom: 2rem;
+}
 
+.learnMoreBtn:hover,
+.seeTheSourceButton:hover {
+    opacity: 0.9;
+}
+
+/* Footer */
+.footer {
+    padding: 3rem 3.75rem;
+    background: #2B2B2B;
+    color: #F5EAD7;
+}
+
+.footer .homeLogo {
+    margin-bottom: 1rem;
+}
+
+.footer h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: #F5EAD7;
+}
+
+.footer p {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+}
+
+.footer ul {
+    display: flex;
+    gap: 2.5rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.footer a {
+    font-size: 0.88rem;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+/* About and transparency */
+.aboutPage h1,
+.aboutPage h2,
+.aboutPage h3 {
+    line-height: 1.25;
+}
+
+.aboutPage h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.aboutIntro,
+.aboutCreating,
+.aboutPricing,
+.aboutSources {
+    padding: 3rem 5%;
+}
+
+.aboutIntro {
+    background: #F5EAD7;
+}
+
+.aboutIntro h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.aboutJumpLinks,
+.aboutGrid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.5rem;
+}
+
+.aboutJumpLinks {
+    margin-top: 2rem;
+}
+
+.aboutOutlineLink,
+.aboutPrimaryLink {
+    display: block;
+    width: 100%;
+    padding: 0.75rem 1rem;
+    font: inherit;
+    text-align: left;
+    cursor: pointer;
+}
+
+.aboutOutlineLink {
+    border: 1px solid #2E4D2D;
+    color: #2E4D2D;
+    background: #F5EAD7;
+}
+
+.aboutOutlineLink:hover,
+.aboutPrimaryLink:hover {
+    opacity: 0.9;
+}
+
+.aboutCreating,
+.aboutSources {
+    background: #fff;
+}
+
+.aboutCard {
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+    background: #F5EAD7;
+}
+
+.aboutCard h3 {
+    font-size: 1.125rem;
+    margin-bottom: 1rem;
+}
+
+.aboutCard p {
+    margin-bottom: 0.4rem;
+}
+
+.aboutCard .aboutMaker {
+    margin-top: 0.5rem;
+}
+
+.aboutCard .aboutOutlineLink {
+    margin-top: auto;
+}
+
+.aboutCard p + .aboutOutlineLink {
+    margin-top: 1rem;
+}
+
+.aboutPrimaryLink {
+    margin-top: 1.5rem;
+    border: none;
+    background: #2E4D2D;
+    color: #F5EAD7;
+}
+
+.aboutPricing {
+    background: #5B8C88;
+}
+
+.aboutPricing h2 {
+    color: #F5EAD7;
+}
+
+.aboutPriceList {
+    margin: 0 0 1rem;
+}
+
+.aboutPriceList div {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+    border: 1px solid #2E4D2D;
+}
+
+.aboutPriceList dd {
+    margin: 0;
+}
+
+.aboutTotal {
+    font-weight: 600;
+}
+
+.aboutSources p + p {
+    margin-top: 1rem;
+}
+
+.learnMoreBtn,
+.seeTheSourceButton {
+    display: block;
+    width: 100%;
+    padding: 1.125rem 1rem;
+    border: none;
+    background: #C46A4B;
+    color: #F5EAD7;
+    font-family: inherit;
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 1.5;
+    text-align: center;
+}
+
+.seeTheSourceButton {
+    margin-top: 1.5rem;
+    cursor: pointer;
+}
+
+/* Mobile */
+@media (max-width: 37.5rem) {
+    header {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1.5rem 1.25rem;
+        text-align: center;
+    }
+
+    .logo {
+        height: 2rem;
+    }
+
+    .homeLogo {
+        width: 8rem;
+    }
+
+    header nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.75rem 1.5rem;
+    }
+
+    .hero {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 2rem;
+        padding: 2rem 1.25rem;
+    }
+
+    .heroLandingSection {
+        max-width: none;
+    }
+
+    .heroLandingSection h1 {
+        font-size: 2.25rem;
+    }
+
+    .heroImage {
+        flex: none;
+        max-width: none;
+        aspect-ratio: 238 / 151;
+    }
+
+    .intro {
+        padding: 2.5rem 1.25rem 2rem;
+    }
+
+    .intro h2 {
+        font-size: 1.63rem;
+    }
+
+    .intro p {
+        max-width: none;
+    }
+
+    .pieces {
+        padding: 1rem 0 2rem;
+    }
+
+    .pieces h3 {
+        padding: 0 1.25rem;
+        text-align: center;
+        font-size: 1.25rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .pieceProductGrid {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+    }
+
+    .piece {
+        padding: 0 1.25rem;
+    }
+
+    .piece h4 {
+        font-size: 1.13rem;
+    }
+
+    .piece p {
+        font-size: 1rem;
+    }
+
+    .piecesBtn {
+        padding: 0.88rem 1rem;
+    }
+
+    .trust {
+        padding: 2.5rem 1.25rem;
+    }
+
+    .trust h3 {
+        font-size: 1.38rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .labelGrid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .labelCard {
+        padding: 1.25rem;
+    }
+
+    .learnMore {
+        padding: 3.5rem 1.25rem;
+    }
+
+    .learnMore h3 {
+        font-size: 1.38rem;
+    }
+
+    .footer {
+        padding: 2.5rem 1.25rem;
+        text-align: left;
+    }
+
+    .footer ul {
+        flex-wrap: wrap;
+        gap: 1.5rem;
+    }
+
+    .aboutIntro,
+    .aboutCreating,
+    .aboutPricing,
+    .aboutSources {
+        padding: 2.5rem 1.25rem;
+    }
+
+    .aboutIntro h1 {
+        font-size: 1.75rem;
+    }
+
+    .aboutJumpLinks,
+    .aboutGrid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .aboutPricing h2 {
+        text-align: center;
+    }
+}

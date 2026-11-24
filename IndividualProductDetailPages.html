@@ -1,22 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+    <!-- 
+        Civic Threads Apparel - Product Page
+        Author: Bridget Flanery, Lilly Mena, Matthew Yates, Hayden Harris, Nico Morente
+        Description: Product page for Civic Threads Apparel showcasing sustainable clothing.
+    -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="assets/icons/favicon/icons8-thread-linear-colour-96.png">
     <title>Civic Threads Apparel</title>
-    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="../Assets/Icons/favicon/icons8-thread-linear-colour-32.png">
+    <script src="../src/app.js" defer></script>
+    <script src="https://cdn.shopify.com/storefront/web-components.js" async>
+    </script>
+    <script src="../src/productPage.js" defer></script>
 </head>
+
 <body>
-    <header>
-        <a href="index.html"><img src="assets/siteImages/logo.png" alt=" logo"></a>
+   <header>
+            <a href="#"><img class="homeLogo" src="Assets/siteImages/logo.png" alt="Civic Threads"></a>
         <nav>
             <ul>
-                <li><a href="checkoutFlow.html"><img src="assets/icons/icons8-shopping-cart-48.png" alt="shopping cart" ></a></li>
-                <li><a href="productListing.html">Shop</a></li> 
-                <li><a href="#">See The Source</a></li>
+                <li><a href="productListing.html">Shop</a></li>
+                <li><a href="individualProductDetailPages.html">See The Source</a></li>
                 <li><a href="aboutPage.html">About Us</a></li>
-                <!-- I put only these because I think others would be linked to from various clicks in shop -->
+                <li><a href="checkoutFlow.html"><img class="shoppingCart" src="Assets/Icons/icons8-shopping-cart-48.png" alt="shopping cart"></a></li>
             </ul>
         </nav>
     </header>
@@ -100,19 +108,30 @@
         </section>
     </main>
 
+    <!-- Matthew Js Section -->
+    <!-- <main>
+        <shopify-store store-domain="civic-threads-dev.myshopify.com" country="US" language="en"
+            public-access-token="7c491e3417403558712288f3c692aa8c">
+        </shopify-store>
+    </main> -->
 
-    <footer>
+    <!-- Footer -->
+    <footer class="footer">
         <div>
-            <a href="#"><img src="assets/siteImages/logo.png" alt=" logo"></a>
-            <p><a target="_blank" href="assets/icons/favicon/icons8-thread-linear-colour-96.png">Thread</a> favicon by <a target="_blank" href="https://icons8.com">Icons8</a></p>
-            <p><a target="_blank" href="https://icons8.com/icon/P6ZYIof6BwLW/shopping-cart">Shopping Cart</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a></p>
+            <a href="#"><img class="homeLogo" src="Assets/siteImages/logo.png" alt="Civic Threads"></a>
+            <!-- <p><a target="_blank" href="Assets/Icons/favicon/icons8-thread-linear-colour-96.png">Thread</a> favicon by <a target="_blank" href="https://icons8.com">Icons8</a></p>
+            <p><a target="_blank" href="https://icons8.com/icon/P6ZYIof6BwLW/shopping-cart">Shopping Cart</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a></p> -->
         </div>
-        <p>Shop with those you trust.</p>
+            <p>Shop with those you trust.</p>
         <div>
-            <a href="productListing.html">Shop Us</a>
-            <a href="IndividualProductDetailPages.html">See Our Sources</a>
-            <a href="aboutPage.html">About Us</a>
+            <a href="./public/productListing.html">Shop Us</a>
+            <a href="./public/aboutUsPage.html#sources">See Our Sources</a>
+            <a href="./public/aboutUsPage.html">About Us</a>
         </div>
     </footer>
+
+    <script src="./src/app.js" defer></script>
+
 </body>
+
 </html>

@@ -1,124 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
+    <!-- 
+        Civic Threads Apparel - About Page
+        Author: Bridget Flanery, Lilly Mena, Matthew Yates, Hayden Harris, Nico Morente
+        Description: About page for Civic Threads Apparel showcasing sustainable clothing.
+    -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Civic Threads Apparel</title>
-    <link rel="icon" type="image/png" href="assets/icons/favicon/icons8-thread-linear-colour-96.png">
-    <link rel="stylesheet" href="styles/styles.css">
+    <title>Our Sources | Civic Threads Apparel</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="../Assets/Icons/favicon/icons8-thread-linear-colour-32.png">
+    <link rel="stylesheet" href="../styles/styles.css">
+    <script src="https://cdn.shopify.com/storefront/web-components.js" async></script>
 </head>
+
 <body>
-    <header>
-        <a href="index.html"><img src="assets/siteImages/logo.png" alt=" logo"></a>
+   <header>
+            <a href="#"><img class="homeLogo" src="Assets/siteImages/logo.png" alt="Civic Threads"></a>
         <nav>
             <ul>
-                <li><a href="checkoutFlow.html"><img src="assets/icons/icons8-shopping-cart-48.png" alt="shopping cart" ></a></li>
-                <li><a href="productListing.html">Shop</a></li> 
-                <li><a href="IndividualProductDetailPages.html">See The Source</a></li>
-                <li><a href="#">About Us</a></li>
-                <!-- I put only these because I think others would be linked to from various clicks in shop -->
+                <li><a href="productListing.html">Shop</a></li>
+                <li><a href="individualProductDetailPages.html">See The Source</a></li>
+                <li><a href="aboutPage.html">About Us</a></li>
+                <li><a href="checkoutFlow.html"><img class="shoppingCart" src="Assets/Icons/icons8-shopping-cart-48.png" alt="shopping cart"></a></li>
             </ul>
         </nav>
     </header>
 
-    <main>
-        <section>
-            <h2>Original Threads to Final Product</h2>
-            <p>A transparent and honest look at the source, materials and price of our product. Including our </p>
-            <div>
-                <a href="#creating" class="button">01-Creating</a>
-                <a href="#pricing" class="button">02-Pricing</a>
-            </div>
-        </section>
-        <section id="creating">
-            <h2>01|Creating the Product</h2>
-            <div>
-                <h3>{product} | ${country}</h3>
-                <p>Create and Dye - ${create}</p>
-                <p>Cut and Sew - ${sew}</p>
-                <p>Inspection and Pack - ${ship}</p>
-                <p>Maker: ${factory}</p>
-                <p>[{tagCert} - ${tagType}]</p>
-            </div>
-            <div>
-                <h3>{product} | ${country}</h3>
-                <p>Create and Dye - ${create}</p>
-                <p>Cut and Sew - ${sew}</p>
-                <p>Inspection and Pack - ${ship}</p>
-                <p>Maker: ${factory}</p>
-                <p>[{tagCert} - ${tagType}]</p>
-            </div>
-        </section>
-        <section id="pricing">
-            <h2>02| Transparent and honest pricing</h2>
-            <table>
-                <legend>${product} | ${country}</legend>
-                <tr>
-                    <th>Materials</th>
-                    <td>${matPrice}</td>
-                </tr>
-                <tr>
-                    <th>Cut & Sewing</th>
-                    <td>${sewPrice}</td>
-                </tr>
-                <tr>
-                    <th>Transporting</th>
-                    <td>${transPrice}</td>
-                </tr>
-                <tr>
-                    <th>Operating</th>
-                    <td>${opPrice}</td>
-                </tr>
-                <tr>
-                    <th>Brand Margins</th>
-                    <td>${margin}</td>
-                </tr>
-                <p>
-                    Final Retail Price ${cur}${Math.sumPrecise([matPrice,sewPrice,transPrice,opPrice,margin])}
-                </p>
-            </table>
 
-            <table>
-                <legend>${product} | ${country}</legend>
-                <tr>
-                    <th>Materials</th>
-                    <td>${matPrice}</td>
-                </tr>
-                <tr>
-                    <th>Cut & Sewing</th>
-                    <td>${sewPrice}</td>
-                </tr>
-                <tr>
-                    <th>Transporting</th>
-                    <td>${transPrice}</td>
-                </tr>
-                <tr>
-                    <th>Operating</th>
-                    <td>${opPrice}</td>
-                </tr>
-                <tr>
-                    <th>Brand Margins</th>
-                    <td>${margin}</td>
-                </tr>
-                <p>
-                    Final Retail Price ${cur}${Math.sumPrecise([matPrice,sewPrice,transPrice,opPrice,margin])}
-                </p>
-            </table>
+    <main class="aboutPage">
+        <!-- Intro Section -->
+        <section class="aboutIntro" id="transparency">
+            <h1>Original Threads to Final Product</h1>
+            <p>A transparent and honest look at the source, materials, and price of all our product. Including our known corresponding sources and claims.</p>
+            <nav class="aboutJumpLinks" aria-label="On this page">
+                <a class="aboutOutlineLink" href="#creating">01 - Creating</a>
+                <a class="aboutOutlineLink" href="#pricing">02 - Pricing</a>
+            </nav>
         </section>
 
+        <!-- Creating Section -->
+        <section class="aboutCreating" id="creating">
+            <h2>01 | Creating the product</h2>
+            <div class="aboutGrid">
+                <article class="aboutCard" id="basic-tee-creation">
+                    <h3>Basic Tee | United States</h3>
+                    <p>Create and Dye - Turkey</p>
+                    <p>Cut and Sew - United States</p>
+                    <p>Inspection and Pack - United States</p>
+                    <p class="aboutMaker">Maker: Example Factory</p>
+                    <p>[D] - Composition documented</p>
+                    <p>[Un] - Pay</p>
+                    <a class="aboutOutlineLink" href="#basic-tee-pricing">Explore the example pricing ></a>
+                </article>
+                <article class="aboutCard" id="linen-pants-creation">
+                    <h3>Linen Pants | France</h3>
+                    <p>Create and Dye - France</p>
+                    <p>Cut and Sew - France</p>
+                    <p>Inspection and Pack - France</p>
+                    <p class="aboutMaker">Maker: Example Factory</p>
+                    <p>[D] - Composition documented</p>
+                    <p>[Un] - Pay</p>
+                    <a class="aboutOutlineLink" href="#linen-pants-pricing">Explore the example pricing ></a>
+                </article>
+            </div>
+            <button class="aboutPrimaryLink" onclick="location.href='#pricing'">Next: Honest Pricing ></button>
+        </section>
+
+        <!-- Pricing Section -->
+        <section class="aboutPricing" id="pricing">
+            <h2>02 | Transparent and honest pricing</h2>
+            <div class="aboutGrid">
+                <article class="aboutCard aboutPriceCard" id="basic-tee-pricing">
+                    <h3>Basic Tee | United States</h3>
+                    <dl class="aboutPriceList">
+                        <div><dt>Materials</dt><dd>$11</dd></div>
+                        <div><dt>Cut &amp; Sewing</dt><dd>$6</dd></div>
+                        <div><dt>Transporting</dt><dd>$4</dd></div>
+                        <div><dt>Operating</dt><dd>$14</dd></div>
+                        <div><dt>Brand Margins</dt><dd>$10</dd></div>
+                    </dl>
+                    <p class="aboutTotal">Final Retail Price: $45 USD</p>
+                    <button class="aboutOutlineLink" onclick="location.href='#basic-tee-creation'">Return to basic tee ></button>
+                </article>
+                <article class="aboutCard aboutPriceCard" id="linen-pants-pricing">
+                    <h3>Linen Pants | France</h3>
+                    <dl class="aboutPriceList">
+                        <div><dt>Materials</dt><dd>$20</dd></div>
+                        <div><dt>Cut &amp; Sewing</dt><dd>$20</dd></div>
+                        <div><dt>Transporting</dt><dd>$5</dd></div>
+                        <div><dt>Operating</dt><dd>$30</dd></div>
+                        <div><dt>Brand Margins</dt><dd>$20</dd></div>
+                    </dl>
+                    <p class="aboutTotal">Final Retail Price: $95 USD</p>
+                    <button class="aboutOutlineLink" onclick="location.href='#linen-pants-creation'">Return to linen pants ></button>
+                </article>
+            </div>
+        </section>
+
+        <!-- A Document Section -->
+        <section class="aboutSources" id="sources">
+            <h2>A document can support, or not support a claim</h2>
+            <p>Many documents can support a claim in regards to different threads. However, it doesn’t prove the environmental impact, or working conditions of a supplier.</p>
+            <button class="seeTheSourceButton" onclick="location.href='#creating'">See the source ></button>
+        </section>
     </main>
-    <footer>
+
+    <!-- Footer -->
+    <footer class="footer">
         <div>
-            <a href="#"><img src="assets/siteImages/logo.png" alt=" logo"></a>
-            <p><a target="_blank" href="assets/icons/favicon/icons8-thread-linear-colour-96.png">Thread</a> favicon by <a target="_blank" href="https://icons8.com">Icons8</a></p>
-            <p><a target="_blank" href="https://icons8.com/icon/P6ZYIof6BwLW/shopping-cart">Shopping Cart</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a></p>
+            <a href="#"><img class="homeLogo" src="Assets/siteImages/logo.png" alt="Civic Threads"></a>
+            <!-- <p><a target="_blank" href="Assets/Icons/favicon/icons8-thread-linear-colour-96.png">Thread</a> favicon by <a target="_blank" href="https://icons8.com">Icons8</a></p>
+            <p><a target="_blank" href="https://icons8.com/icon/P6ZYIof6BwLW/shopping-cart">Shopping Cart</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a></p> -->
         </div>
-        <p>Shop with those you trust.</p>
+            <p>Shop with those you trust.</p>
         <div>
-            <a href="productListing.html">Shop Us</a>
-            <a href="IndividualProductDetailPages.html">See Our Sources</a>
-            <a href="aboutPage.html">About Us</a>
+            <a href="./public/productListing.html">Shop Us</a>
+            <a href="./public/aboutUsPage.html#sources">See Our Sources</a>
+            <a href="./public/aboutUsPage.html">About Us</a>
         </div>
     </footer>
+
+    <script src="./src/app.js" defer></script>
+
 </body>
 </html>
