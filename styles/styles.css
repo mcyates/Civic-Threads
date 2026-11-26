@@ -1,13 +1,35 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&&display=swap');
 /* Base */
 * {
     box-sizing: border-box;
 }
 
+
+
+
+
+:root{
+    --forest:  #2E4D2D;
+    --coastal: #5B8C88;
+    --canvas: #F5EAD7;
+    --terracotta: #C46A4B;
+    --charcoal: #2B2B2B;
+    --background: #ffffff; 
+}
+
+
+
+
+
+
+
+
 body {
     margin: 0;
     font-family: "Inter", Helvetica, Arial, sans-serif;
-    color: #2B2B2B;
-    background: #F5EAD7;
+    color: var(--charcoal);
+    background: var(--canvas);
     line-height: 1.5;
 }
 
@@ -33,7 +55,7 @@ h1,
 h2,
 h3,
 h4 {
-    color: #2E4D2D;
+    color: var(--forest);
 }
 
 /* Header */
@@ -43,7 +65,7 @@ header {
     justify-content: space-between;
     flex-wrap: wrap;
     padding: 1.5rem 3.75rem;
-    background: #F5EAD7;
+    background: var(--canvas);
 }
 
 header > h1 {
@@ -81,11 +103,13 @@ header nav ul {
 
 header nav a {
     font-size: 1rem;
-    color: #2E4D2D;
+    color: var(--forest);
+    
 }
 
 header nav a:hover {
     text-decoration: underline;
+    text-underline-offset: 4px;
 }
 
 
@@ -623,4 +647,132 @@ header nav a:hover {
     .aboutPricing h2 {
         text-align: center;
     }
+}
+
+
+/* Lilly's code */
+/* INDIVIDUAL PRODUCT PAGE */
+
+.individualProductDetailPage{
+    --forest:  #2E4D2D;
+    --coastal: #5B8C88;
+    --canvas: #F5EAD7;
+    --terracotta: #C46A4B;
+    --charcoal: #2b2b2b;
+    --small-padding: .75rem;
+    --norm-padding: 1rem;
+    --gap: 2rem;
+    display: grid;
+    justify-self: center;
+    width:90%;
+    color:var(--charcoal);
+}
+
+.individualProductDetailPage p, .individualProductDetailPage a,
+.individualProductDetailPage button{
+    font-size: 1.25rem;
+}
+
+.orangeButton{
+    background-color: #C46A4B;
+    border:none;}
+
+.greyButton{
+    background-color: var(--charcoal);}
+.blue{
+    background-color: var(--coastal);}
+
+.coloredSec p, .coloredSec h2{
+    color:var(--canvas);}
+
+.orangeButton,.greyButton{
+    width: 100%;
+    padding:.75em;
+    color:white;
+}
+
+.individualProductDetailPage section:nth-child(2){
+    background-color: #2E4D2D;
+    display:grid;
+    gap:var(--gap);
+    padding: var(--pad);
+    justify-items: center;
+    
+}
+.individualProductDetailPage section:nth-child(2) div{
+width: 100%;
+
+}
+table{
+    width:100%;
+    border-collapse: collapse;
+}
+tr{
+    margin:3px;
+    border: 5px var(--forest) solid;
+    background-color: white;
+    width:33.4%;
+    text-align: center;
+}
+
+tr[aria-label="selected"],td[aria-label="selected"]{
+    background-color: var(--canvas);
+}
+td,th{
+    padding:.25rem;
+}
+.individualProductDetailPage section:last-child {
+    display:grid;
+    gap: var(--gap);
+    align-items: center;
+}
+.itemListing > div{
+    display:grid;
+    align-self: start;
+    gap:var(--gap);
+    width:100%;
+}
+.individualProductDetailPage section{
+    margin: 2rem;
+}
+
+.individualProductDetailPage div  div, section div{
+    padding:var(--small-padding);
+}
+
+ /* GOES IN QUERY FOR LARGER SCREENS  */
+ .itemListing{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    justify-self: center;
+    align-items: top;
+    gap:var(--gap); 
+}
+
+.itemListing img{
+    height:90%;
+    grid-column: 1/2;
+    grid-row: 1/3;
+    justify-self: end;
+}
+.itemListing h1, .itemListing > div{
+    grid-column: 2/3;
+    text-align: left;
+    color:var(--charcoal);
+}
+.itemListing h1{
+    grid-row:1/2;
+} 
+
+.individualProductDetailPage section:nth-child(2) {
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+    
+} 
+/* For New home link in header */
+header > a, .footer > a{
+    font-family: "Playfair Display",serif;
+    font-size: 2.4rem;
+    font-weight:600;
+    color: var(--forest);
 }

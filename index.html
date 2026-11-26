@@ -11,13 +11,14 @@
     <title>Civic Threads Apparel</title>
     <link rel="icon" type="image/png" sizes="32x32" href="./Assets/Icons/favicon/icons8-thread-linear-colour-32.png">
     <link rel="stylesheet" href="./styles/styles.css">
+    <script src="../src/app.js" defer></script>
     <script src="https://cdn.shopify.com/storefront/web-components.js">
     </script>
 </head>
 
 <body>
    <header>
-            <a href="#"><img class="homeLogo" src="Assets/siteImages/logo.png" alt="Civic Threads"></a>
+            <a href="#">Civic / Threads</a>
         <nav>
             <ul>
                 <li><a href="productListing.html">Shop</a></li>
@@ -70,6 +71,32 @@
                 </div>
         </section>
         <!-- Change with JSON data -->
+        <!-- Matthew Js Section -->
+        <shopify-store store-domain="civic-threads-dev.myshopify.com" country="US" language="en"
+            public-access-token="7c491e3417403558712288f3c692aa8c">
+        </shopify-store>
+        <shopify-context type="collection" handle="unisex-shirts">
+            <template class="pieces">
+                <h2>
+                    <span>Check out our latest collection: </span>
+                    <shopify-data query="collection.title"></shopify-data>
+                </h2>
+                <div class="pieceProductGrid">
+                    <shopify-list-context type="product" query="collection.products" first="12">
+                        <template>
+                            <article shopify-attr--data-id="product.handle" class="product piece">
+                                <shopify-media width="200" height="300" query="product.featuredImage" class="piece-image"></shopify-media>
+                                        <div>
+                                            <h4><shopify-data query="product.title" class="line"></shopify-data></h4>
+                                            <p><shopify-data query="product.vendor" class="line"></shopify-data></p>
+                                            <p><shopify-data query="product.description" class="line"></shopify-data></p>
+                                            <a href="./public/product.html?" class="piecesBtn">Details</a>
+                                        </div>
+                            </article>
+                        </template>
+                    </shopify-list-context>
+                </div>
+        </shopify-context>
 
         <!-- Trust Section -->
         <section class="trust">
@@ -89,50 +116,25 @@
         </section>
         
         <!-- Learn More Section -->
-        <section class="learnMore">
+        <section class="learnMore ">
             <h3>Learn more about our clothing.<br>Follow the evidence.</h3>
                 <p>Explore the various locations, the environmental impact and the reported pay.</p>
                 <button class="learnMoreBtn" onclick="location.href='./public/aboutUsPage.html#transparency'">Open the transparency hub ></button>
         </section>
-
-
-        <!-- Matthew Js Section -->
-        <!-- <shopify-store store-domain="civic-threads-dev.myshopify.com" country="US" language="en"
-            public-access-token="7c491e3417403558712288f3c692aa8c">
-        </shopify-store>
-        <shopify-context type="collection" handle="unisex-shirts">
-            <template>
-                <h2>
-                    <span>Check out our latest collection: </span>
-                    <shopify-data query="collection.title"></shopify-data>
-                </h2>
-                <shopify-list-context type="product" query="collection.products" first="12">
-                    <template>
-                        <article shopify-attr--data-id="product.handle" class="product">
-                            <shopify-media width="200" height="300" query="product.featuredImage"></shopify-media>
-                            <shopify-data query="product.title"></shopify-data>
-                            <shopify-data query="product.vendor"></shopify-data>
-                            <shopify-data query="product.description"></shopify-data>
-                            <a href="./public/product.html?">Details</a>
-                        </article>
-                    </template>
-                </shopify-list-context>
-            </template>
-        </shopify-context> -->
+        
     </main>
 
     <!-- Footer -->
     <footer class="footer">
-        <div>
-            <a href="#"><img class="homeLogo" src="Assets/siteImages/logo.png" alt="Civic Threads"></a>
-            <!-- <p><a target="_blank" href="Assets/Icons/favicon/icons8-thread-linear-colour-96.png">Thread</a> favicon by <a target="_blank" href="https://icons8.com">Icons8</a></p>
-            <p><a target="_blank" href="https://icons8.com/icon/P6ZYIof6BwLW/shopping-cart">Shopping Cart</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a></p> -->
-        </div>
+        <a href="#">Civic / Threads</a>
             <p>Shop with those you trust.</p>
         <div>
             <a href="./public/productListing.html">Shop Us</a>
             <a href="./public/aboutUsPage.html#sources">See Our Sources</a>
             <a href="./public/aboutUsPage.html">About Us</a>
+        </div>
+        <div>
+            <a href="#"><img class="homeLogo" src="Assets/logos/CivicThreads_Logo_White_Crop.png" alt="Civic Threads"></a>
         </div>
     </footer>
 
