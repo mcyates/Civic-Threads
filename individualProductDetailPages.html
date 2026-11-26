@@ -10,14 +10,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Civic Threads Apparel</title>
     <link rel="icon" type="image/png" sizes="32x32" href="./assets/icons/favicon/icons8-thread-linear-colour-32.png">
-    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="./styles/styles.css">
     <script src="./src/app.js" defer></script>
     <script src="https://cdn.shopify.com/storefront/web-components.js" async>
     </script>
     <script src="./src/productPage.js" defer></script>
 </head>
 
-<body class="productDetailPage">
+<body class="product-detail-page">
    <header>
             <a href="index.html">Civic / Threads</a>
         <nav>
@@ -36,7 +36,7 @@
 
         <a class="productBackLink" href="productListing.html">← Shop</a>
         <section class="itemListing">
-            <img src="assets/siteImages/thomas-william-6Sls-TB27kM-unsplash.png" alt="Dress form decorated with flowers">
+            <img src="assets/siteImages/thomas-william-6Sls-TB27kM-unsplash.png" alt="Product photo">
            <div class="productDetails">
             <h1>{product}</h1>
             <p>$ {price}</p>
@@ -56,7 +56,8 @@
                     </form> -->
                     
                     
-                <button class="greyButton">Add to cart</button>
+                <div class="sizeSelect">Size - S selected</div>
+                <button class="greyButton">Add to cart - $ {price}</button>
                 <div class="coloredSec blue">
                     <p>The Claims:</p>
                     <p>[${tagCert}]- Composition ${documentedStr}</p>
@@ -70,9 +71,10 @@
         <section class="coloredSec green productSpecifications">
             <div>
                 <h2>Specifications, Care, and Fit</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque, vitae.</p>
-                <h2>Care Instructions</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque, vitae.</p>
+                <h3>Made for Everyday</h3>
+                <p>A relaxed unisex fit, made for everyday usage with a composition of ${material}.</p>
+                <h3>Care Instructions</h3>
+                <p>Machine wash cold, below 80 degrees F. Wash with like colors and do not bleach.</p>
             </div>
             <div class="productMeasurements">
                 <h2>Size Measurements (In)</h2>
@@ -116,17 +118,17 @@
             <div class="coloredSec blue">
                 <p>[${tagCert}] ${Tag type}</p>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                <button class="orangeButton">See the Source</button>
+                <a href="aboutPage.html#sources" class="orangeButton">See the Source →</a>
             </div>
             <div class="coloredSec blue">
                 <p>[${tagCert}] ${Tag type}</p>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                <button class="orangeButton">See the Source</button>
+                <a href="aboutPage.html#sources" class="orangeButton">See the Source →</a>
             </div>
             <div class="coloredSec blue">
                 <p>[${tagCert}] ${Tag type}</p>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                <button class="orangeButton">See the Source</button>
+                <a href="aboutPage.html#sources" class="orangeButton">See the Source →</a>
             </div>
         </section>
     </main>
