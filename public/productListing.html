@@ -35,29 +35,69 @@
     </header>
 
 
-    <main>
-        <shopify-store store-domain="civicthreads-store.myshopify.com" country="US" language="en"
-            public-access-token="a666c1f30c44e51fbf7304aef2b9de15">
-            <shopify-cart id="cart"></shopify-cart>
+    <main class="productListing"">
+        <section class=" coloredSec green">
+        <h1>See It. Find it. Wear it.</h1>
+        <p>Learn about where your clothing comes from evidence in plain sight. Start with with idea and follow the
+            proof.
+        </p>
+        </section>
+        <section>
+            <!-- <h2>Narrow Your Search</h2>
+            <form>
+                <select name="category" id="category">
+                    <option value="shirt">Category - Tees</option>
+                    <option value="jacket">Category - Jackets</option>
+                    <option value="bottoms">Category - Bottoms</option>
+                </select>
+                <select name="material" id="material">
+                    <option value="cotton">100% Cotton</option>
+                    <option value="linen">100% Linen</option>
+                </select>
+                <select name="origin" id="origin">
+                    <option value="usa">USA</option>
+                    <option value="france">France</option>
+                </select>
+                <select name="size" id="size">
+                    <option value="xs">XS</option>
+                    <option value="s">S</option>
+                    <option value="m">M</option>
+                    <option value="l">L</option>
+                    <option value="xl">XL</option>
+                </select>
+                <p id="searchResults"> ${num} items found</p>
+                <button>Clear All</button>
+            </form> -->
+            <shopify-store store-domain="civicthreads-store.myshopify.com" country="US" language="en"
+                public-access-token="a666c1f30c44e51fbf7304aef2b9de15">
+                <shopify-cart id="cart"></shopify-cart>
 
-        </shopify-store>
-
-        <shopify-list-context type="product" query="products" first="10" sortkey="TITLE">
-            <template>
-                <article shopify-attr--data-id="product.handle" class="product">
-                    <shopify-media width="200" height="300" query="product.featuredImage"></shopify-media>
-                    <h2>
-                        <shopify-data query="product.title"></shopify-data>
-                    </h2>
-                    <shopify-data query="product.vendor"></shopify-data>
-                    <shopify-data query="product.description"></shopify-data>
-                    <shopify-money query="product.selectedOrFirstAvailableVariant.price" format="money_with_currency">
-                    </shopify-money>
-                    <a href="./product.html?">Details</a>
-                </article>
-            </template>
-            </shopify-context>
-
+            </shopify-store>
+            <div class="listings">
+                <shopify-list-context type="product" query="products" first="10" sortkey="TITLE">
+                    <template>
+                        <article shopify-attr--data-id="product.handle" class="product">
+                            <shopify-media width="200" height="300" query="product.featuredImage"></shopify-media>
+                            <h2>
+                                <shopify-data query="product.title"></shopify-data>
+                            </h2>
+                            <shopify-data query="product.vendor"></shopify-data>
+                            <shopify-data query="product.description"></shopify-data>
+                            <shopify-money query="product.selectedOrFirstAvailableVariant.price"
+                                format="money_with_currency">
+                            </shopify-money>
+                            <a href="./product.html?">Details</a>
+                        </article>
+                    </template>
+                </shopify-list-context>
+            </div>
+        </section>
+        <section class="coloredSec blue blueSect">
+            <h2>A label you can trust.</h2>
+            <p>[D] Documented: Officially recognized as sustainable and having a source that supports the claim.</p>
+            <p>[Un] Unknown: These claims lack evidence or are missing necessary information</p>
+            <p><a href="aboutPage.html" class="button orangeButton">Open the transparency hub -></a></p>
+        </section>
     </main>
     <!-- Footer -->
     <footer class="footer">
