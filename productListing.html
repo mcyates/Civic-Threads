@@ -8,9 +8,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/styles.css">
     <title>Civic Threads Apparel</title>
     <link rel="icon" type="image/png" sizes="32x32" href="../Assets/Icons/favicon/icons8-thread-linear-colour-32.png">
     <script src="https://cdn.shopify.com/storefront/web-components.js" async>
+    
     </script>
 </head>
 
@@ -22,34 +24,106 @@
                 <li><a href="productListing.html">Shop</a></li>
                 <li><a href="individualProductDetailPages.html">See The Source</a></li>
                 <li><a href="aboutPage.html">About Us</a></li>
-                <li><a href="checkoutFlow.html"><img class="shoppingCart" src="Assets/Icons/icons8-shopping-cart-48.png" alt="shopping cart"></a></li>
+                <li>
+                    <button onclick="getElementById('cart').showModal();">
+                        Show cart
+                    </button>
+                </li>
             </ul>
         </nav>
     </header>
 
-    <main>
-        <section>
+    <main class="productListing">
+        <section class="coloredSec green">
             <h1>See It. Find it. Wear it.</h1>
             <p>Learn about where your clothing comes from evidence in plain sight. Start with with idea and follow the proof.</p>
         </section>
         <section>
             <h2>Narrow Your Search</h2>
-                <form action="GET">
-                    <fieldset>
-                        <input type="text" name="category" id="category" aria-label="desired clothing type"  placeholder="Category - Tees">
-                        <input type="text" name="material" id="material" aria-label="desired material" placeholder="Material - 100% Cotton">
-                        <input type="text" name="madeIn" id="madeIn" aria-label=" desired origin Country" Placeholder="Made in - France">
-                    </fieldset>
+                <form>
+                    <select name="category" id="category">
+                            <option value="shirt">Category - Tees</option>
+                            <option value="jacket">Category - Jackets</option>
+                            <option value="bottoms">Category - Bottoms</option>
+                    </select>
+                    <select name="material" id="material">
+                            <option value="cotton">100% Cotton</option>
+                            <option value="linen">100% Linen</option>
+                    </select>
+                    <select name="origin" id="origin">
+                            <option value="usa">USA</option>
+                            <option value="france">France</option>
+                    </select>
+                    <select name="size" id="size">
+                            <option value="xs">XS</option>
+                            <option value="s">S</option>
+                            <option value="m">M</option>
+                            <option value="l">L</option>
+                            <option value="xl">XL</option>
+                    </select>
                 </form>
                 <p id="searchResults"> ${num} items found</p>
                 <button>Clear All</button>
-                <div id="listings">
-                    <div class="card">
-                        <img src="assets/siteImages/thomas-william-6Sls-TB27kM-unsplash.jpg" alt="" class="listingImg">
-                        <h2> class="title">${product} - ${cur}${price}</h2>
-                        <p class="material/location">{material}- Made in {country}</p>
-                        <p class="documented">Officially Documented</p>
-                        <p><a href="IndividualProductDetailPages.html" class = "button ">View Details -></a></p>
+                
+                        <shopify-store store-domain="civic-threads-dev.myshopify.com" country="US" language="en"
+                            public-access-token="7c491e3417403558712288f3c692aa8c">
+                        </shopify-store>
+                        <div class="listings">
+                            <shopify-list-context type="product" query="products" first="10">
+                            <template>
+                                <article shopify-attr--data-id="product.handle" class="product card">
+                                    <div class="card-img-container">
+                                        <shopify-media width="200" height="300" query="product.featuredImage" class="piece-image card-img" alt=""></shopify-media>
+                                        <i class="info-i" aria-hidden="true">i</i>
+                                        <button class="quick-look" popovertarget="basic-tee-quick-1">Quick look &#x27A4;</button>
+                                    </div>
+                                    
+                                    <h2>
+                                        <shopify-data query="product.title"></shopify-data>
+                                    </h2> 
+                                    <p><shopify-money query="product.selectedOrFirstAvailableVariant.price" format="money_with_currency"></shopify-money></p>
+                                    </shopify-money>
+                                    <p><shopify-data query="product.description"></shopify-data></p>
+                                    <p><shopify-data query="product.vendor"></shopify-data></p>
+                                    
+                                    <a href="./product.html?" class="piecesBtn">Details</a>
+                                </article>
+                            </template>
+                            </shopify-context>
+
+                        </div>
+                        
+                    <!--
+                    Matt thing that's working
+                    <div >
+                        <shopify-store store-domain="civic-threads-dev.myshopify.com" country="US" language="en"
+                            public-access-token="7c491e3417403558712288f3c692aa8c">
+                        </shopify-store>
+                        <div class="listings">
+                            <shopify-list-context type="product" query="products" first="10">
+                            <template>
+                                <article shopify-attr--data-id="product.handle" class="product card">
+                                    <shopify-media width="200" height="300" query="product.featuredImage" class="piece-image"></shopify-media>
+                                    <h2>
+                                        <shopify-data query="product.title"></shopify-data>
+                                    </h2> 
+                                    <p><shopify-data query="product.vendor"></shopify-data></p>
+                                    <p><shopify-data query="product.description"></shopify-data></p>
+                                    <p><shopify-money query="product.selectedOrFirstAvailableVariant.price" format="money_with_currency"></shopify-money></p>
+                                    </shopify-money>
+                                    <a href="./product.html?" class="piecesBtn">Details</a>
+                                </article>
+                            </template>
+                            </shopify-context>
+
+                        </div>
+                        
+                    </div>
+                     -->
+
+
+                    <!-- <div>
+                        
                     </div>
                     <div class="card">
                         <img src="assets/siteImages/thomas-william-6Sls-TB27kM-unsplash.jpg" alt="" class="listingImg">
@@ -71,14 +145,14 @@
                         <p class="material/location">{material}- Made in {country}</p>
                         <p class="documented">Officially Documented</p>
                         <p><a href="IndividualProductDetailPages.html" class = "button ">View Details -></a></p>
-                    </div>
+                    </div> -->
                 </div>
         </section>
-        <section>
+        <section class="coloredSec blue blueSect">
             <h2>A label you can trust.</h2>
             <p>[D] Documented: Officially recognized as sustainable and having a source that supports the claim.</p>
             <p>[Un] Unknown: These claims lack evidence or are missing necessary information</p>
-            <p><a href="aboutPage.html" class = "button">Open the transparency hub -></a></p>
+            <p><a href="aboutPage.html" class = "button orangeButton">Open the transparency hub -></a></p>
         </section>
     </main>
 
