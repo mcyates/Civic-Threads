@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- 
+        Civic Threads Apparel - Product Page
+        Author: Bridget Flanery, Lilly Mena, Matthew Yates, Hayden Harris, Nico Morente
+        Description: Product page for Civic Threads Apparel showcasing sustainable clothing.
+    -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Civic Threads Apparel</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/icons/favicon/icons8-thread-linear-colour-32.png">
+    <link rel="stylesheet" href="styles/styles.css">
+    <script src="../src/app.js" defer></script>
+    <script src="https://cdn.shopify.com/storefront/web-components.js" async>
+    </script>
+    <script src="../src/productPage.js" defer></script>
+</head>
+
+<body class="product-detail-page">
+   <header>
+            <a href="index.html">Civic / Threads</a>
+        <nav>
+            <ul>
+                <li><a href="productListing.html">Shop</a></li>
+                <li><a href="individualProductDetailPages.html" aria-current="page">See The Source</a></li>
+                <li><a href="aboutPage.html">About Us</a></li>
+               <li>
+                    <button onclick="getElementById('cart').showModal();"><img src="assets/icons/shopingCartIcon.png" alt="Cart"></button>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="individualProductDetailPage">
+
+        <a class="productBackLink" href="productListing.html">← Shop</a>
+        <section class="itemListing">
+            <img src="assets/siteImages/thomas-william-6Sls-TB27kM-unsplash.png" alt="Dress form decorated with flowers">
+           <div class="productDetails">
+            <h1>{product}</h1>
+            <p>$ {price}</p>
+                    <p>${description}</p>
+                    <p>${material} - Made in ${country}</p>
+                    <p>Color - ${color}</p>
+                    <!-- <form action="" method="POST" target="_blank">
+                        <div id="dropDown">
+                            <select name="size" id="size">
+                            <option value="xs">Size:XS</option>
+                            <option value="s">Size:S</option>
+                            <option value="m">Size:M</option>
+                            <option value="l">Size:L</option>
+                            <option value="xl">Size:XL</option>
+                            </selects>
+                        </div>
+                    </form> -->
+                    
+                    
+                <button class="greyButton">Add to cart</button>
+                <div class="coloredSec blue">
+                    <p>The Claims:</p>
+                    <p>[${tagCert}]- Composition ${documentedStr}</p>
+                    <p>[${tagCert}]- Factory ${knownBool}</p>
+                    <p>[${tagCert}]- Pay</p>
+                </div>
+                <a href="aboutPage.html" class="orangeButton">Explore more on the creation and cost →</a>
+           </div>
+                
+        </section>
+        <section class="coloredSec green productSpecifications">
+            <div>
+                <h2>Specifications, Care, and Fit</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque, vitae.</p>
+                <h2>Care Instructions</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque, vitae.</p>
+            </div>
+            <div class="productMeasurements">
+                <h2>Size Measurements (In)</h2>
+                <table>
+                    <tr>
+                        <th>Size</th>
+                        <th>Chest Width</th>
+                        <th>Length</th>
+                    </tr>
+                    <tr>
+                        <td>XS</td>
+                        <td>${chestWidth}</td>
+                        <td>${length}</td>
+                    </tr>
+                    <tr aria-label="selected">
+                        <td>S</td>
+                        <td>${chestWidth}</td>
+                        <td>${length}</td>
+                    </tr>
+                    <tr>
+                        <td>M</td>
+                        <td>${chestWidth}</td>
+                        <td>${length}</td>
+                    </tr>
+                    <tr>
+                        <td>L</td>
+                        <td>${chestWidth}</td>
+                        <td>${length}</td>
+                    </tr>
+                    <tr>
+                        <td>XL</td>
+                        <td>${chestWidth}</td>
+                        <td>${length}</td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+        <section class="productEvidence">
+            <h2>What do we know about this product?</h2>
+            <p>All of our clothing with the [D] "documented" has been evaluated and found to have supported evidence to support our claims</p>
+            <div class="coloredSec blue">
+                <p>[${tagCert}] ${Tag type}</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                <button class="orangeButton">See the Source</button>
+            </div>
+            <div class="coloredSec blue">
+                <p>[${tagCert}] ${Tag type}</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                <button class="orangeButton">See the Source</button>
+            </div>
+            <div class="coloredSec blue">
+                <p>[${tagCert}] ${Tag type}</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                <button class="orangeButton">See the Source</button>
+            </div>
+        </section>
+    </main>
+
+    <!-- Matthew Js Section -->
+    <!-- <main>
+        <shopify-store store-domain="civic-threads-dev.myshopify.com" country="US" language="en"
+            public-access-token="7c491e3417403558712288f3c692aa8c">
+        </shopify-store>
+    </main> -->
+
+    <!-- Footer -->
+    <footer class="footer">
+            <a href="index.html">Civic / Threads</a>
+            <p>Shop with those you trust.</p>
+        <div>
+            <a href="productListing.html">Shop Us</a>
+            <a href="aboutPage.html#sources">See Our Sources</a>
+            <a href="aboutPage.html">About Us</a>
+        </div>
+        <div>
+            <a href="index.html"><img class="homeLogo" src="./assets/logos/CivicThreads_Logo_White_Crop.png" alt="Civic Threads"></a>
+        </div>
+    </footer>
+
+    <script src="./src/app.js" defer></script>
+
+</body>
+
+</html>
