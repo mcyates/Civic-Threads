@@ -10,21 +10,21 @@
     <link rel="stylesheet" href="../styles/styles.css">
 </head>
 
-<body>
+<body class="about-page">
     <header>
+        <a href="index.html">Civic / Threads</a>
         <nav>
             <ul>
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="./aboutPage.html">About</a></li>
-                <li><a href="./productListing.html">Shop</a></li>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./public/productListing.html">Shop</a></li>
+                <li><a href="./public/aboutPage.html">About Us</a></li>
                 <li>
                     <button onclick="getElementById('cart').showModal();">
-                        Show Cart
+                        <img src="assets/icons/shopingCartIcon.png" alt="Cart">
                     </button>
                 </li>
             </ul>
         </nav>
-        <h1>About</h1>
     </header>
     <main>
         <shopify-store store-domain="civicthreads-store.myshopify.com" country="US" language="en"
