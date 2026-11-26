@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="../styles/styles.css">
 </head>
 
-<body>
+<body class="product-detail-page">
     <header>
         <a href="index.html">Civic / Threads</a>
         <nav>
@@ -33,12 +33,77 @@
             </ul>
         </nav>
     </header>
-    <main>
+    <main class="individualProductDetailPage">
         <shopify-store store-domain="civicthreads-store.myshopify.com" country="US" language="en"
             public-access-token="a666c1f30c44e51fbf7304aef2b9de15">
 
         </shopify-store>
         <shopify-cart id="cart"></shopify-cart>
+        <section class="coloredSec green productSpecifications">
+            <div>
+                <h2>Specifications, Care, and Fit</h2>
+                <h3>Made for Everyday</h3>
+                <p>A relaxed unisex fit, made for everyday usage with a composition of ${material}.</p>
+                <h3>Care Instructions</h3>
+                <p>Machine wash cold, below 80 degrees F. Wash with like colors and do not bleach.</p>
+            </div>
+            <div class="productMeasurements">
+                <h2>Size Measurements (In)</h2>
+                <table>
+                    <tr>
+                        <th>Size</th>
+                        <th>Chest Width</th>
+                        <th>Length</th>
+                    </tr>
+                    <tr>
+                        <td>XS</td>
+                        <td>${chestWidth}</td>
+                        <td>${length}</td>
+                    </tr>
+                    <tr aria-label="selected">
+                        <td>S</td>
+                        <td>${chestWidth}</td>
+                        <td>${length}</td>
+                    </tr>
+                    <tr>
+                        <td>M</td>
+                        <td>${chestWidth}</td>
+                        <td>${length}</td>
+                    </tr>
+                    <tr>
+                        <td>L</td>
+                        <td>${chestWidth}</td>
+                        <td>${length}</td>
+                    </tr>
+                    <tr>
+                        <td>XL</td>
+                        <td>${chestWidth}</td>
+                        <td>${length}</td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+        <section class="productEvidence">
+            <h2>What do we know about this product?</h2>
+            <p>All of our clothing with the [D] "documented" has been evaluated and found to have supported evidence to
+                support
+                our claims</p>
+            <div class="coloredSec blue">
+                <p>[${tagCert}] ${Tag type}</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                <a href="aboutPage.html#sources" class="orangeButton">See the Source →</a>
+            </div>
+            <div class="coloredSec blue">
+                <p>[${tagCert}] ${Tag type}</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                <a href="aboutPage.html#sources" class="orangeButton">See the Source →</a>
+            </div>
+            <div class="coloredSec blue">
+                <p>[${tagCert}] ${Tag type}</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                <a href="aboutPage.html#sources" class="orangeButton">See the Source →</a>
+            </div>
+        </section>
     </main>
     <!-- Footer -->
     <footer class="footer">
