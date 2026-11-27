@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- 
+            Civic Threads Apparel - Product Page
+            Author: Bridget Flanery, Lilly Mena, Matthew Yates, Hayden Harris, Nico Morente
+            Description: Product page for Civic Threads Apparel showcasing sustainable clothing.
+        -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Civic Threads Apparel</title>
+    <script src="https://cdn.shopify.com/storefront/web-components.js" async></script>
+    <script src="../src/app.js" defer></script>
+    <link rel="icon" type="image/png" sizes="32x32" href="../Assets/Icons/favicon/icons8-thread-linear-colour-32.png">
+    <link rel="stylesheet" href="../styles/styles.css">
+</head>
+
+<body class="about-page">
+    <header>
+        <a href="index.html">Civic / Threads</a>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="./productListing.html">Shop</a></li>
+                <li><a href="./aboutPage.html">About Us</a></li>
+                <li>
+                    <button onclick="getElementById('cart').showModal();">
+                        <img src="../assets/icons/shopingCartIcon.png" alt="Cart">
+                    </button>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <!-- Intro Section -->
+        <section class="aboutIntro" id="transparency">
+            <h1>Original Threads to Final Product</h1>
+            <p>A transparent and honest look at the source, materials, and price of all our product. Including our known
+                corresponding sources and claims.</p>
+            <nav class="aboutJumpLinks" aria-label="On this page">
+                <a class="aboutOutlineLink" href="#creating">01 - Creating</a>
+                <a class="aboutOutlineLink" href="#pricing">02 - Pricing</a>
+            </nav>
+        </section>
+
+        <!-- Creating Section -->
+        <section class="aboutCreating" id="creating">
+            <h2>01 | Creating the product</h2>
+            <div class="aboutGrid">
+                <article class="aboutCard" id="basic-tee-creation">
+                    <h3>Basic Tee | United States</h3>
+                    <p>Create and Dye - Turkey</p>
+                    <p>Cut and Sew - United States</p>
+                    <p>Inspection and Pack - United States</p>
+                    <p class="aboutMaker">Maker: Example Factory</p>
+                    <p>[D] - Composition documented</p>
+                    <p>[Un] - Pay</p>
+                    <a class="aboutOutlineLink" href="#basic-tee-pricing">Explore more on the creation and cost →</a>
+                </article>
+                <article class="aboutCard" id="linen-pants-creation">
+                    <h3>Linen Pants | France</h3>
+                    <p>Create and Dye - France</p>
+                    <p>Cut and Sew - France</p>
+                    <p>Inspection and Pack - France</p>
+                    <p class="aboutMaker">Maker: Example Factory</p>
+                    <p>[D] - Composition documented</p>
+                    <p>[Un] - Pay</p>
+                    <a class="aboutOutlineLink" href="#linen-pants-pricing">Explore more on the creation and cost →</a>
+                </article>
+            </div>
+            <a class="aboutPrimaryLink" href="#pricing">Next: Honest Pricing →</a>
+        </section>
+
+        <!-- Pricing Section -->
+        <section class="aboutPricing" id="pricing">
+            <h2>02 | Transparent and honest pricing</h2>
+            <div class="aboutGrid">
+                <article class="aboutCard aboutPriceCard" id="basic-tee-pricing">
+                    <h3>Basic Tee | United States</h3>
+                    <dl class="aboutPriceList">
+                        <div>
+                            <dt>Materials</dt>
+                            <dd>$11</dd>
+                        </div>
+                        <div>
+                            <dt>Cut & Sewing</dt>
+                            <dd>$6</dd>
+                        </div>
+                        <div>
+                            <dt>Transporting</dt>
+                            <dd>$4</dd>
+                        </div>
+                        <div>
+                            <dt>Operating</dt>
+                            <dd>$14</dd>
+                        </div>
+                        <div>
+                            <dt>Brand Margins</dt>
+                            <dd>$10</dd>
+                        </div>
+                    </dl>
+                    <p class="aboutTotal">Final Retail Price: $45 USD</p>
+                    <a class="aboutOutlineLink" href="#basic-tee-creation">Return to basic tee →</a>
+                </article>
+                <article class="aboutCard aboutPriceCard" id="linen-pants-pricing">
+                    <h3>Linen Pants | France</h3>
+                    <dl class="aboutPriceList">
+                        <div>
+                            <dt>Materials</dt>
+                            <dd>$20</dd>
+                        </div>
+                        <div>
+                            <dt>Cut & Sewing</dt>
+                            <dd>$20</dd>
+                        </div>
+                        <div>
+                            <dt>Transporting</dt>
+                            <dd>$5</dd>
+                        </div>
+                        <div>
+                            <dt>Operating</dt>
+                            <dd>$30</dd>
+                        </div>
+                        <div>
+                            <dt>Brand Margins</dt>
+                            <dd>$20</dd>
+                        </div>
+                    </dl>
+                    <p class="aboutTotal">Final Retail Price: $95 USD</p>
+                    <a class="aboutOutlineLink" href="#linen-pants-creation">Return to linen pants →</a>
+                </article>
+            </div>
+        </section>
+
+        <!-- A Document Section -->
+        <section class="aboutSources" id="sources">
+            <h2>A document can support, or not support a claim</h2>
+            <p>Many documents can support a claim in regards to different threads. However, it doesn’t prove the
+                environmental
+                impact, or working conditions of a supplier.</p>
+            <a class="seeTheSourceButton" href="#creating">See the source →</a>
+        </section>
+        <shopify-store store-domain="civicthreads-store.myshopify.com" country="US" language="en"
+            public-access-token="a666c1f30c44e51fbf7304aef2b9de15">
+            <shopify-cart id="cart"></shopify-cart>
+        </shopify-store>
+    </main>
+    <!-- Footer -->
+    <footer class="footer">
+        <a href="index.html">Civic / Threads</a>
+        <p>Shop with those you trust.</p>
+        <div>
+            <a href="./productListing.html">Shop Us</a>
+            <a href="./aboutPage.html">About Us</a>
+        </div>
+        <div>
+            <a href="#"><img class="homeLogo" src="../assets/logos/CivicThreads_Logo_White_Crop.png"
+                    alt="Civic Threads"></a>
+        </div>
+    </footer>
+</body>
+
+</html>
