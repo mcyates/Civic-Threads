@@ -204,6 +204,29 @@ h2 {
     }
 }
 
+shopify-cart::part(dialog) {
+    background-color: var(--canvas);
+    color: var(--charcoal);
+    border-radius: 0;
+}
+
+
+.cart-title {
+    color: var(--forest);
+}
+
+
+shopify-cart::part(primary-button) {
+    background-color: var(--terracotta);
+    color: var(--canvas);
+    border-radius: 0;
+}
+
+shopify-cart::part(tertiary-button) {
+    background-color: var(--forest);
+    color: white;
+}
+
 .sort {
     margin: 0 auto;
     max-width: var(--content-width);
