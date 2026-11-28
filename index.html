@@ -79,11 +79,20 @@
                                     <shopify-media width="200" height="300"
                                         query="product.featuredImage"></shopify-media>
                                     <i class="info-i" aria-hidden="true">i</i>
-                                    <button class="quick-look" popovertarget="basic-tee-quick-1">Quick look
+                                    <button class="quick-look" popovertarget="product-popover">Quick look
                                         &#x27A4;</button>
                                 </div>
-                                <div id="basic-tee-quick-1" popover="auto">
-                                    <button class="popover-close" popovertarget="basic-tee-quick-1"
+                                <h2 class="card-title">
+                                    <shopify-data query="product.title"></shopify-data>
+                                </h2>
+                                <shopify-data class="short-details" query="product.description"></shopify-data>
+                                <shopify-data class="material-source" query="product.vendor"></shopify-data>
+                                <p class="label">
+                                    [D] Documented
+                                </p>
+                                <a href="./public/product.html?">View Details &rarr;</a>
+                                <div id="product-popover" popover="auto">
+                                    <button class="popover-close" popovertarget="product-popover"
                                         popovertargetaction="hide" aria-label="Close details">Close x</button>
                                     <h3>Cotton: what the evidence supports</h3>
                                     <p class="claim">[D] Documented - Provided by supplier</p>
@@ -95,21 +104,19 @@
                                     </div>
                                     <div class="popover-greenbox">
                                         <p>Does this prove?</p>
-                                        <p>This claim only supports the fact that these cotton fibers sourced from said
+                                        <p>This claim only supports the fact that these cotton fibers sourced from
+                                            said
                                             locations. No notes on farm
                                             listings or whether or not they're organic fibers.</p>
                                     </div>
                                     <div class="popover-greenbox">
                                         <p>What else?</p>
-                                        <p>To further support the claims we will request more records on the testing of
+                                        <p>To further support the claims we will request more records on the testing
+                                            of
                                             the batch we're sourcing for our
                                             products.</p>
                                     </div>
                                 </div>
-                                <shopify-data query="product.description"></shopify-data>
-                                <shopify-data query="product.title"></shopify-data>
-                                <shopify-data query="product.vendor"></shopify-data>
-                                <a href="./public/product.html?">Details</a>
                             </article>
                         </template>
                     </shopify-list-context>
