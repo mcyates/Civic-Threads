@@ -75,10 +75,38 @@
                     <shopify-list-context type="product" query="collection.products" first="2">
                         <template>
                             <article shopify-attr--data-id="product.handle" class="product">
-                                <shopify-media width="200" height="300" query="product.featuredImage"></shopify-media>
-                                <div class="" popover="auto">
-                                    <shopify-data query="product.description"></shopify-data>
+                                <div class="card-img-container">
+                                    <shopify-media width="200" height="300"
+                                        query="product.featuredImage"></shopify-media>
+                                    <i class="info-i" aria-hidden="true">i</i>
+                                    <button class="quick-look" popovertarget="basic-tee-quick-1">Quick look
+                                        &#x27A4;</button>
                                 </div>
+                                <div id="basic-tee-quick-1" popover="auto">
+                                    <button class="popover-close" popovertarget="basic-tee-quick-1"
+                                        popovertargetaction="hide" aria-label="Close details">Close x</button>
+                                    <h3>Cotton: what the evidence supports</h3>
+                                    <p class="claim">[D] Documented - Provided by supplier</p>
+                                    <small>Created: August 12th, 2024 - Reviewed: November 17th, 2026</small>
+                                    <div class="popover-greenbox">
+                                        <p>Claim</p>
+                                        <p>Basic Tee: 100% Cotton. Origin of cotton: Turkey. Cut and sewn in United
+                                            States.</p>
+                                    </div>
+                                    <div class="popover-greenbox">
+                                        <p>Does this prove?</p>
+                                        <p>This claim only supports the fact that these cotton fibers sourced from said
+                                            locations. No notes on farm
+                                            listings or whether or not they're organic fibers.</p>
+                                    </div>
+                                    <div class="popover-greenbox">
+                                        <p>What else?</p>
+                                        <p>To further support the claims we will request more records on the testing of
+                                            the batch we're sourcing for our
+                                            products.</p>
+                                    </div>
+                                </div>
+                                <shopify-data query="product.description"></shopify-data>
                                 <shopify-data query="product.title"></shopify-data>
                                 <shopify-data query="product.vendor"></shopify-data>
                                 <a href="./public/product.html?">Details</a>
