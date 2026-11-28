@@ -184,12 +184,13 @@ h2 {
 .listing-header {
     max-width: var(--content-width);
     margin: 0 auto;
-    padding: 0 2rem;
+    padding: 2rem;
     background-color: var(--forest);
     color: var(--canvas);
 
-    h2 {
+    & h1 {
         color: var(--canvas);
+        font-family: "Inter", Helvetica, Arial, sans-serif;
     }
 }
 
