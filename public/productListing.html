@@ -17,7 +17,7 @@
         rel="stylesheet">
     <script src="https://cdn.shopify.com/storefront/web-components.js" async>
     </script>
-    <link rel="icon" type="image/png" sizes="32x32" href="../Assets/Icons/favicon/icons8-thread-linear-colour-32.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/icons/favicon/icons8-thread-linear-colour-32.png">
     <link rel="stylesheet" href="../styles/styles.css">
     <script src="../src/app.js" defer></script>
 </head>
@@ -84,18 +84,47 @@
                 <shopify-list-context type="product" query="products" first="10" sortkey="TITLE">
                     <template>
                         <article shopify-attr--data-id="product.handle" class="product">
-                            <shopify-media width="200" height="300" query="product.featuredImage"></shopify-media>
-                            <h2>
+                            <div class="card-img-container">
+                                <shopify-media width="200" height="300" query="product.featuredImage"></shopify-media>
+                                <i class="info-i" aria-hidden="true">i</i>
+                                <button class="quick-look" popovertarget="product-popover">Quick look
+                                    &#x27A4;</button>
+                            </div>
+                            <h2 class="card-title">
                                 <shopify-data query="product.title"></shopify-data>
                             </h2>
-
-                            <p>
-                                <shopify-money query="product.selectedOrFirstAvailableVariant.price"
-                                    format="money_with_currency">
-                                </shopify-money>
+                            <shopify-data class="short-details" query="product.description"></shopify-data>
+                            <shopify-data class="material-source" query="product.vendor"></shopify-data>
+                            <p class="label">
+                                [D] Documented
                             </p>
-                            <shopify-data query="product.description"></shopify-data>
-                            <a href="./product.html?">Details</a>
+                            <a href="./public/product.html?">View Details &rarr;</a>
+                            <div id="product-popover" popover="auto">
+                                <button class="popover-close" popovertarget="product-popover" popovertargetaction="hide"
+                                    aria-label="Close details">Close x</button>
+                                <h3>Cotton: what the evidence supports</h3>
+                                <p class="claim">[D] Documented - Provided by supplier</p>
+                                <small>Created: August 12th, 2024 - Reviewed: November 17th, 2026</small>
+                                <div class="popover-greenbox">
+                                    <p>Claim</p>
+                                    <p>Basic Tee: 100% Cotton. Origin of cotton: Turkey. Cut and sewn in United
+                                        States.</p>
+                                </div>
+                                <div class="popover-greenbox">
+                                    <p>Does this prove?</p>
+                                    <p>This claim only supports the fact that these cotton fibers sourced from
+                                        said
+                                        locations. No notes on farm
+                                        listings or whether or not they're organic fibers.</p>
+                                </div>
+                                <div class="popover-greenbox">
+                                    <p>What else?</p>
+                                    <p>To further support the claims we will request more records on the testing
+                                        of
+                                        the batch we're sourcing for our
+                                        products.</p>
+                                </div>
+                            </div>
                         </article>
                     </template>
                 </shopify-list-context>
