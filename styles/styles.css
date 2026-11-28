@@ -204,6 +204,17 @@ h2 {
     }
 }
 
+.sort {
+    margin: 0 auto;
+    max-width: var(--content-width);
+    display: flex;
+    align-items: end;
+
+    & form {
+        margin: 0;
+    }
+}
+
 .listings {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
