@@ -16,3 +16,12 @@ function setupProductLinks(prodList) {
         product.querySelector("a").href = `${href}${product.dataset.id}`;
     });
 }
+
+// handle sorting
+let sort = document.querySelector("select");
+let sortVal = sort.value;
+let listContext = document.querySelector("shopify-list-context");
+
+sort.addEventListener('change', (event) => {
+    listContext.setAttribute("sort-key", event.target.value);
+});

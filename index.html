@@ -10,6 +10,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Civic Threads Apparel</title>
+    <script src="https://cdn.shopify.com/storefront/web-components.js" async></script>
+    <script src="./src/app.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -17,8 +19,6 @@
         rel="stylesheet">
     <link rel="icon" type="image/png" sizes="32x32" href="./assets/icons/favicon/icons8-thread-linear-colour-32.png">
     <link rel="stylesheet" href="./styles/styles.css">
-    <script src="https://cdn.shopify.com/storefront/web-components.js" async></script>
-    <script src="./src/app.js" defer></script>
 </head>
 
 <body class="home-page">
@@ -72,7 +72,8 @@
                     <shopify-data query="collection.title"></shopify-data>
                 </h2>
                 <section class="listings">
-                    <shopify-list-context type="product" query="collection.products" first="2">
+                    <shopify-list-context type="product" query="collection.products" first="2" sort-key="RELEVANCE"
+                        reverse-order="false">
                         <template>
                             <article shopify-attr--data-id="product.handle" class="product">
                                 <div class="card-img-container">
