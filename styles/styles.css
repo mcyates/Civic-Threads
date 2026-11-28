@@ -34,6 +34,8 @@ h2,
 h3,
 h4 {
     font-family: "Playfair Display", Georgia, serif;
+    font-optical-sizing: auto;
+    font-style: normal;
     font-weight: 500;
     color: var(--forest);
     margin: 0;
@@ -184,13 +186,16 @@ h2 {
 .listing-header {
     max-width: var(--content-width);
     margin: 0 auto;
-    padding: 2rem;
+    padding: 3rem 2rem;
     background-color: var(--forest);
     color: var(--canvas);
 
     & h1 {
         color: var(--canvas);
-        font-family: "Inter", Helvetica, Arial, sans-serif;
+    }
+
+    & p {
+        font-size: 1rem;
     }
 }
 
@@ -203,17 +208,13 @@ h2 {
     padding: 0 2rem;
 }
 
-/* Shopify collection
-
-.home-page shopify-list-context[shopify-context-display-contents] {
-    display: grid !important;
-}
-
 article.product {
     display: flex;
     flex-direction: column;
     gap: 0.4rem;
+    max-width: 562px;
 }
+
 
 article.product shopify-media {
     width: 100%;
@@ -221,22 +222,30 @@ article.product shopify-media {
     overflow: hidden;
 }
 
-article.product shopify-media img {
+
+.image {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
+
 
 article.product shopify-data[query="product.title"] {
     font-size: 1.15rem;
     font-weight: 500;
 }
 
+
 article.product shopify-data[query="product.vendor"],
 article.product shopify-data[query="product.description"] {
     font-size: 0.85rem;
     color: var(--light-charcoal);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 562px;
 }
+
 
 article.product > a {
     display: block;
@@ -247,10 +256,14 @@ article.product > a {
     text-decoration: none;
     font-size: 0.9rem;
     text-align: center;
-} */
-#product-card-desc {
-    overflow: hidden;
-    text-overflow: ellipsis;
+}
+
+#product-card-desc,
+{
+white-space: nowrap;
+overflow: hidden;
+text-overflow: ellipsis;
+max-width: 562px;
 }
 
 /* Trust */
