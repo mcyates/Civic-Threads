@@ -66,17 +66,19 @@
                     <span>Check out our latest collection: </span>
                     <shopify-data query="collection.title"></shopify-data>
                 </h2>
-                <shopify-list-context type="product" query="collection.products" first="2">
-                    <template>
-                        <article shopify-attr--data-id="product.handle" class="product">
-                            <shopify-media width="200" height="300" query="product.featuredImage"></shopify-media>
-                            <shopify-data query="product.title"></shopify-data>
-                            <shopify-data query="product.vendor"></shopify-data>
-                            <shopify-data query="product.description"></shopify-data>
-                            <a href="./public/product.html?">Details</a>
-                        </article>
-                    </template>
-                </shopify-list-context>
+                <section class="listings">
+                    <shopify-list-context type="product" query="collection.products" first="2">
+                        <template>
+                            <article shopify-attr--data-id="product.handle" class="product">
+                                <shopify-media width="200" height="300" query="product.featuredImage"></shopify-media>
+                                <shopify-data query="product.title"></shopify-data>
+                                <shopify-data query="product.vendor"></shopify-data>
+                                <shopify-data query="product.description"></shopify-data>
+                                <a href="./public/product.html?">Details</a>
+                            </article>
+                        </template>
+                    </shopify-list-context>
+                </section>
             </template>
         </shopify-context>
 
