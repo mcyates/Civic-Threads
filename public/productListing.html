@@ -57,22 +57,6 @@
                     <option value="jacket">Category - Jackets</option>
                     <option value="bottoms">Category - Bottoms</option>
                 </select>
-                <select name="material" id="material">
-                    <option value="cotton">100% Cotton</option>
-                    <option value="linen">100% Linen</option>
-                </select>
-                <select name="origin" id="origin">
-                    <option value="usa">USA</option>
-                    <option value="france">France</option>
-                </select>
-                <select name="size" id="size">
-                    <option value="xs">XS</option>
-                    <option value="s">S</option>
-                    <option value="m">M</option>
-                    <option value="l">L</option>
-                    <option value="xl">XL</option>
-                </select>
-                <p id="searchResults"> ${num} items found</p>
                 <button>Clear All</button>
             </form> -->
             <shopify-store store-domain="civicthreads-store.myshopify.com" country="US" language="en"
@@ -81,7 +65,7 @@
 
             </shopify-store>
             <section class="listings">
-                <shopify-list-context type="product" query="products" first="10" sortkey="TITLE">
+                <shopify-list-context type="product" query="products" first="10" sortkey="TITLE" sort-key="TITLE">
                     <template>
                         <article shopify-attr--data-id="product.handle" class="product">
                             <div class="card-img-container">
