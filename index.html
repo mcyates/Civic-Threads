@@ -15,7 +15,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
         rel="stylesheet">
-    <link rel="icon" type="image/png" sizes="32x32" href="./Assets/Icons/favicon/icons8-thread-linear-colour-32.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/icons/favicon/icons8-thread-linear-colour-32.png">
     <link rel="stylesheet" href="./styles/styles.css">
     <script src="https://cdn.shopify.com/storefront/web-components.js" async></script>
     <script src="./src/app.js" defer></script>
@@ -76,9 +76,11 @@
                         <template>
                             <article shopify-attr--data-id="product.handle" class="product">
                                 <shopify-media width="200" height="300" query="product.featuredImage"></shopify-media>
+                                <div class="" popover="auto">
+                                    <shopify-data query="product.description"></shopify-data>
+                                </div>
                                 <shopify-data query="product.title"></shopify-data>
                                 <shopify-data query="product.vendor"></shopify-data>
-                                <shopify-data query="product.description"></shopify-data>
                                 <a href="./public/product.html?">Details</a>
                             </article>
                         </template>
