@@ -50,22 +50,25 @@
         </div>
         </section>
         <section>
-            <!-- <h2>Narrow Your Search</h2>
+            <h2>Sort</h2>
             <form>
                 <select name="category" id="category">
-                    <option value="shirt">Category - Tees</option>
-                    <option value="jacket">Category - Jackets</option>
-                    <option value="bottoms">Category - Bottoms</option>
+                    <option value="BEST_SELLING">Best Selling</option>
+                    <option value="PRICE">Price</option>
+                    <option value="PRODUCT_TYPE">Category</option>
+                    <option selected value="RELEVANCE">Relevance</option>
+                    <option value="Vendor">Seller</option>
                 </select>
                 <button>Clear All</button>
-            </form> -->
+            </form>
             <shopify-store store-domain="civicthreads-store.myshopify.com" country="US" language="en"
                 public-access-token="a666c1f30c44e51fbf7304aef2b9de15">
                 <shopify-cart id="cart"></shopify-cart>
 
             </shopify-store>
             <section class="listings">
-                <shopify-list-context type="product" query="products" first="10" sortkey="TITLE" sort-key="TITLE">
+                <shopify-list-context type="product" query="products" first="10" sortkey="TITLE" sort-key="RELEVANCE"
+                    reverse-order="false">
                     <template>
                         <article shopify-attr--data-id="product.handle" class="product">
                             <div class="card-img-container">
