@@ -184,11 +184,15 @@ h2 {
 }
 
 .listing-header {
-    max-width: var(--content-width);
-    margin: 0 auto;
+
     padding: 3rem 2rem;
     background-color: var(--forest);
     color: var(--canvas);
+
+    & > div {
+        max-width: var(--content-width);
+        margin: 0 auto;
+    }
 
     & h1 {
         color: var(--canvas);
