@@ -19,9 +19,12 @@ function setupProductLinks(prodList) {
 
 // handle sorting
 let sort = document.querySelector("select");
-let sortVal = sort.value;
-let listContext = document.querySelector("shopify-list-context");
+if (sort != null) {
+    let sortVal = sort.value;
+    let listContext = document.querySelector("shopify-list-context");
+    let isDesc = false;
 
-sort.addEventListener('change', (event) => {
-    listContext.setAttribute("sort-key", event.target.value);
-});
+    sort.addEventListener('change', (event) => {
+        listContext.setAttribute("sort-key", event.target.value);
+    });
+}
