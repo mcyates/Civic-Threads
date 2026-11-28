@@ -1,6 +1,5 @@
 "use strict"
-console.log(window.location.search);
-console.log(window.location.pathname);
+
 let prodList = document.querySelectorAll(".product[data-id");
 
 setTimeout(() => {
